@@ -5,5 +5,5 @@ build:
   - sudo gem install bundler --no-ri --no-rdoc
   - bundle install --deployment
   - bundle exec berks install -p cookbooks
-  - chef-solo -c solo.rb
+  - chef-solo -c solo.rb -p cookbooks
   - composer install --ansi --no-progress --no-dev --no-interaction
