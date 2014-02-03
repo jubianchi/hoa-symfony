@@ -4,6 +4,6 @@ build:
   - sudo apt-get install -y ruby-dev
   - sudo gem install bundler --no-ri --no-rdoc
   - bundle install --deployment
-  - bundle exec berks install
-  - chef-solo -c solo.rb -p cookbooks
+  - bundle exec berks install -p cookbooks
+  - chef-solo -c solo.rb
   - composer install --ansi --no-progress --no-dev --no-interaction
