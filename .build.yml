@@ -1,3 +1,4 @@
 build:
   - curl -L https://www.opscode.com/chef/install.sh | sudo bash
   - chef-solo -v
+  - composer install --ansi --no-progress --no-dev --no-interaction
