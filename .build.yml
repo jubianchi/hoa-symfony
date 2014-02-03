@@ -1,5 +1,6 @@
 build:
   - curl -L https://www.opscode.com/chef/install.sh | sudo bash
+  - sudo apt-get update
   - sudo apt-get install -y ruby-dev
   - sudo gem install bundler --no-ri --no-rdoc
   - bundle install --deployment
