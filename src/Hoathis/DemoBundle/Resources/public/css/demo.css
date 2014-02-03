@@ -1,0 +1,86 @@
+.avatar {
+    border-radius: 5px;
+    width: 160px;
+}
+
+.column {
+    margin-bottom: 25px;
+}
+
+.sf-toolbarreset {
+    background-image: none!important;
+    background: #efe6f5!important;
+}
+
+.sf-toolbarreset a {
+    border-radius: 0px;
+}
+
+.sf-toolbar-icon:hover {
+    background: #795290!important;
+}
+
+.sf-toolbar-block .sf-toolbar-status {
+    background-color: #795290!important;
+}
+
+.sf-toolbar-block:hover .sf-toolbar-status,
+.sf-toolbar-block:hover .sf-toolbar-status abbr {
+    background-color: #efe6f5!important;
+    color: #795290;
+    text-shadow: none;
+}
+
+.sf-toolbar-block .sf-toolbar-status-green, .sf-toolbar-block:hover .sf-toolbar-status-green {
+    background-color: #759e1a!important;
+    color: #fff!important;
+}
+
+.sf-toolbar-block .sf-toolbar-status-red, .sf-toolbar-block:hover .sf-toolbar-status-red {
+    background-color: #a33!important;
+    color: #fff!important;
+}
+
+.sf-toolbar-block .sf-toolbar-status-yellow, .sf-toolbar-block:hover .sf-toolbar-status-yellow {
+    background-color: #ffcc00!important;
+    color: #000!important;
+}
+
+#output {
+    max-height: 250px;
+    height: 250px;
+    overflow: auto;
+}
+
+#output p {
+    margin: 0;
+    padding: 5px 10px;
+    background: #efe6f5;
+}
+
+#output p:nth-child(even) {
+    background: #E0D4EC;
+}
+
+.chardinjs-tooltip {
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.chardinjs-helper-layer {
+    color: #795290;
+}
+
+.chardinjs-overlay {
+    background-color: #efe6f5;
+}
+
+.chardinjs-helper-layer.chardinjs-top {
+    border-top: solid #795290 2px;
+}
+
+.chardinjs-tooltip.chardinjs-right:before, .chardinjs-tooltip.chardinjs-left:after, .chardinjs-tooltip.chardinjs-bottom:before, .chardinjs-tooltip.chardinjs-top:after {
+    width: 2px;
+    background-color: #795290;
+}

@@ -1,0 +1,15 @@
+_welcome:
+    pattern:  /
+    defaults: { _controller: HoathisDemoBundle:Welcome:index }
+
+_bench:
+    pattern:  /bench-bundle
+    defaults: { _controller: HoathisDemoBundle:Bench:index }
+
+_console:
+    pattern:  /console-bundle
+    defaults: { _controller: HoathisDemoBundle:Console:index }
+
+_websocket:
+    pattern:  /websocket-bundle
+    defaults: { _controller: HoathisDemoBundle:WebSocket:index }

@@ -1,0 +1,26 @@
+{% extends 'HoathisDemoBundle::layout.html.twig' %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ asset('bundles/hoathisdemo/css/chardinjs.css') }}"/>
+
+    {{ parent() }}
+{% endblock %}
+
+{% block title %}Hoathis - jubianchi/HoathisConsoleBundle{% endblock %}
+
+{% block logo %}{% endblock %}
+
+{% block content %}
+    <h1>
+        <em lang="en">
+            <span class="image">
+                <img alt="jubianchi" class="avatar" src="//1.gravatar.com/avatar/f46b6942be65359575174569d8979223?d=https%3A%2F%2Fidenticons.github.com%2Facc4e132777a44d2e28c72540d1c894f.png&r=x&s=440">
+                <a href="https://github.com/jubianchi" class="notification">
+                    <img alt="Github" src="{{ asset('bundles/hoathisdemo/Image/Icon_github.svg') }}" width="30px" height="30px">
+                </a>
+            </span>
+        </em>
+        <br>⁂<br>
+        <a href="https://github.com/jubianchi/HoathisConsoleBundle">HoathisConsoleBundle</a>
+    </h1>
+{% endblock %}

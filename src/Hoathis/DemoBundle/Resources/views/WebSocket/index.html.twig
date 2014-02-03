@@ -1,0 +1,125 @@
+{% extends 'HoathisDemoBundle::layout.html.twig' %}
+
+{% block title %}Hoathis - Atipik/Hoa-WebSocket-Bundle{% endblock %}
+
+{% block logo %}{% endblock %}
+
+{% block content %}
+    <h1>
+        <em lang="en">
+            <span class="image">
+                <img alt="Atipik" class="avatar" src="//www.atipik.fr/atk_img/logo_atipik2.png">
+                <a href="https://github.com/atipik" class="notification">
+                    <img alt="Github" src="{{ asset('bundles/hoathisdemo/Image/Icon_github.svg') }}" width="30px" height="30px">
+                </a>
+            </span>
+        </em>
+        <br>⁂<br>
+        <a href="https://github.com/Atipik/Hoa-WebSocket-Bundle">Hoa-WebSocket-Bundle</a>
+    </h1>
+
+    <div class="column fleft w50">
+        <p style="width: calc(100% - 20px);">
+            <input type="text" id="input" style="width: calc(100% - 20px); border-radius: 10px; padding: 5px; font-size: 1.3em"/>
+            <small><code>clear</code> : vider le log, <code>!!</code> : relancer la dernière commande</small>
+        </p>
+        <div id="output" style="width: calc(100% - 25px);"></div>
+    </div>
+
+    <div class="column fright w50">
+        <div id="no-server">
+            <p>Le serveur WebSocket <strong>n'est pas démarré</strong>. Utilisez la commande <code>hoa:websocketserver</code> pour le démarrer.</p>
+            <p>Une fois le serveur démarré, <a onclick="(function(e) { e.preventDefault(); connect(); })(arguments[0])">cliquez ici</a> pour vous connecter.</p>
+        </div>
+        <div id="server">
+            <p>Le serveur WebSocket <strong>est démarré</strong>. Nous avons automatiquement chargé deux modules :</p>
+            <ul>
+                <li><code>Chat</code> : un simple chat</li>
+                <li><code>Faker</code> : générer des données aléatoires (utilisez la commande <code>faker: &lt;générateur&gt;</code>)</li>
+            </ul>
+        </div>
+    </div>
+
+    <br style="clear: both"/>
+
+    <p>
+        Voici le code du module <code>Chat</code> : ce module est très simple, il écoute les messages reçus par le serveur
+        (<em>lignes 12 à 15</em>) et les <strong>broadcast</strong> à tous les clients (<em>ligne 25 à 27</em>). Il envoie également
+        des notifications lorsqu'un nouveau client rejoin le chat (<em>ligne 20</em>) :
+    </p>
+    <pre data-line="12-15,20,25-27"><code class="language-php">{{ code_chat }}</code></pre>
+    <p>
+        Voici le code du module <code>Faker</code> : il écoute les message qui respected un certains motif (<em>ligne 21</em>)
+        afin d'extraire le nom d'un générateur de donnée. Le module appel ensuite ce générateur et répond au client
+        ayant envoyé la requête (<em>ligne 25</em>) avec la méthode <code>send</code>.
+    </p>
+    <pre data-line="21,25"><code class="language-php">{{ code_faker }}</code></pre>
+
+    <script>
+        var host = 'ws://' + window.location.hostname + ':8080',
+            input = document.getElementById('input'),
+            output = document.getElementById('output'),
+            last, socket,
+            print = function (message) {
+                var li = document.createElement('p');
+                li.innerHTML = '<small>' + new Date().toLocaleString() + '</small> - '+ message.replace(/\s/, '&nbsp;') + '\n';
+                output.appendChild(li);
+
+                output.scrollTop = output.scrollHeight;
+            },
+            connect = function() {
+                socket = new WebSocket(host);
+                socket.onopen = function () {
+                    print('Connexion réussie');
+
+                    document.getElementById('no-server').style.display = 'none';
+                    document.getElementById('server').style.display = 'block';
+                    input.disabled = false;
+                    input.focus();
+                };
+
+                socket.onmessage = function (msg) {
+                    print(msg.data);
+                };
+
+                socket.onclose = function () {
+                    print('Connexion fermée');
+
+                    document.getElementById('no-server').style.display = 'block';
+                    document.getElementById('server').style.display = 'none';
+                    input.disabled = true;
+                };
+            };
+
+        input.addEventListener('keyup', function (evt) {
+            var msg = input.value;
+
+            if(13 === evt.keyCode) {
+                if(!msg) return;
+
+                if(msg === 'clear') {
+                    output.innerHTML = '';
+                    input.value = '';
+
+                    return;
+                }
+
+                try {
+                    last = msg;
+                    print(msg);
+                    socket.send(msg);
+                    input.value = '';
+                    input.focus();
+                } catch (e) {
+                    console.log(e);
+                }
+            } else {
+                if(msg.match(/^!!/) && last) {
+                    input.value = last;
+                }
+            }
+        });
+
+        connect();
+    </script>
+{% endblock %}
