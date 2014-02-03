@@ -27,7 +27,3 @@ monolog:
 assetic:
     use_controller: true
 
-atoum:
-    bundles:
-        AtoumAtoumBundle:
-            directories: [tests/units]

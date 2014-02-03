@@ -6,20 +6,6 @@
     "autoload": {
         "psr-0": { "": "src/" }
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "/Users/jubianchi/repositories/hoaproject/HoathisSymfonyConsoleBridge"
-        },
-        {
-            "type": "vcs",
-            "url": "/Users/jubianchi/repositories/hoaproject/HoathisConsoleBundle"
-        },
-        {
-            "type": "vcs",
-            "url": "/Users/jubianchi/repositories/atoum/AtoumBundle"
-        }
-    ],
     "require": {
         "php": ">=5.3.3",
         "symfony/symfony": "2.3.*",
@@ -45,10 +31,7 @@
             "hoa/http": "*@dev",
             "hoa/socket": "*@dev",
             "hoa/stream": "*@dev",
-            "hoa/websocket": "*@dev",
-
-        "atoum/atoum-bundle": "dev-custom-test-env@dev",
-            "atoum/atoum": "*@dev"
+            "hoa/websocket": "*@dev"
     },
     "scripts": {
         "post-install-cmd": [
