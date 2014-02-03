@@ -1,0 +1,25 @@
+{
+  "sources": {
+    "redis": {
+      "locked_version": "3.0.4"
+    },
+    "runit": {
+      "locked_version": "1.5.8"
+    },
+    "build-essential": {
+      "locked_version": "1.4.2"
+    },
+    "yum": {
+      "locked_version": "3.0.4"
+    },
+    "yum-epel": {
+      "locked_version": "0.2.0"
+    },
+    "install_from": {
+      "locked_version": "3.0.4"
+    },
+    "metachef": {
+      "locked_version": "3.0.4"
+    }
+  }
+}
