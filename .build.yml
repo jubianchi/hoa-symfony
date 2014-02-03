@@ -1,6 +1,6 @@
 build:
   - curl -L https://www.opscode.com/chef/install.sh | sudo bash
-  - chef-solo -v
+  - sudo gem install bundler --no-ri --no-rdoc
   - bundle install --deployment
   - bundle exec berks install -p cookbooks
   - chef-solo -c solo.rb
