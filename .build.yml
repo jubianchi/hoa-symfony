@@ -7,4 +7,4 @@ build:
   - bundle exec berks install -p cookbooks
   - chef-solo -c solo.rb
   - composer install --ansi --no-progress --no-dev --no-interaction
-  - app/console hoa:websocketserver & disown
+  - nohup app/console hoa:websocketserver
