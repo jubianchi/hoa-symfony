@@ -7,4 +7,4 @@ build:
   #- bundle exec berks install -p cookbooks
   #- chef-solo -c solo.rb
   - composer install --ansi --no-progress --no-dev --no-interaction
-  - start-stop-daemon --start --background --quiet --pidfile /tmp/websocketserver.pid --exec app/console hoa:websocketserver
+  - start-stop-daemon --start --background --quiet --pidfile /tmp/websocketserver.pid --exec /var/www/app/console hoa:websocketserver
