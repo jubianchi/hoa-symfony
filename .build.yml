@@ -1,10 +1,10 @@
 build:
-  - curl -L https://www.opscode.com/chef/install.sh | sudo bash
-  - sudo apt-get update
-  - sudo apt-get install -y ruby-dev
-  - sudo gem install bundler --no-ri --no-rdoc
-  - bundle install --deployment
-  - bundle exec berks install -p cookbooks
-  - chef-solo -c solo.rb
+  #- curl -L https://www.opscode.com/chef/install.sh | sudo bash
+  #- sudo apt-get update
+  #- sudo apt-get install -y ruby-dev
+  #- sudo gem install bundler --no-ri --no-rdoc
+  #- bundle install --deployment
+  #- bundle exec berks install -p cookbooks
+  #- chef-solo -c solo.rb
   - composer install --ansi --no-progress --no-dev --no-interaction
-  - nohup app/console hoa:websocketserver &
+  - start-stop-daemon --start --background --quiet --pidfile /tmp/websocketserver.pid --exec app/console hoa:websocketserver
