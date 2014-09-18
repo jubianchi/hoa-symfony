@@ -20,17 +20,12 @@
 
         "fzaninotto/faker": "1.2.*",
 
-        "hoa/core": "*@dev",
         "hoathis/console-bundle": "dev-master",
             "hoathis/symfony-console-bridge": "*@dev",
             "hoa/console": "*@dev",
-                "hoa/string": "*@dev",
         "hoathis/bench-bundle": "dev-master",
             "hoa/bench": "*@dev",
         "atipik/hoa-websocket-bundle": "dev-master",
-            "hoa/http": "*@dev",
-            "hoa/socket": "*@dev",
-            "hoa/stream": "*@dev",
             "hoa/websocket": "*@dev"
     },
     "scripts": {

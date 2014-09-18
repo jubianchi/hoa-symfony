@@ -1,9 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
     ],
-    "hash": "c42b27c9306ce6628d607479ef8ee306",
+    "hash": "c719fee0f425b418891ea38239e337e4",
     "packages": [
         {
             "name": "atipik/hoa-websocket-bundle",
@@ -12,16 +13,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Atipik/Hoa-WebSocket-Bundle.git",
-                "reference": "f19f5744f031f50b2bae3fcf14b1d9081d2c0ee5"
+                "reference": "0cfdc8ec7af6a0a21eea6fe321378680dac43500"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Atipik/Hoa-WebSocket-Bundle/zipball/f19f5744f031f50b2bae3fcf14b1d9081d2c0ee5",
-                "reference": "f19f5744f031f50b2bae3fcf14b1d9081d2c0ee5",
+                "url": "https://api.github.com/repos/Atipik/Hoa-WebSocket-Bundle/zipball/0cfdc8ec7af6a0a21eea6fe321378680dac43500",
+                "reference": "0cfdc8ec7af6a0a21eea6fe321378680dac43500",
                 "shasum": ""
             },
             "require": {
                 "hoa/websocket": "dev-master",
+                "php": ">=5.4",
                 "symfony/console": "~2.3",
                 "symfony/framework-bundle": "~2.3"
             },
@@ -53,20 +55,20 @@
                     "email": "geek@atipik.fr"
                 }
             ],
-            "time": "2014-01-30 15:44:34"
+            "time": "2014-09-18 08:17:22"
         },
         {
             "name": "doctrine/annotations",
-            "version": "v1.1.2",
+            "version": "v1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/annotations.git",
-                "reference": "40db0c96985aab2822edbc4848b3bd2429e02670"
+                "reference": "d9b1a37e9351ddde1f19f09a02e3d6ee92e82efd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/annotations/zipball/40db0c96985aab2822edbc4848b3bd2429e02670",
-                "reference": "40db0c96985aab2822edbc4848b3bd2429e02670",
+                "url": "https://api.github.com/repos/doctrine/annotations/zipball/d9b1a37e9351ddde1f19f09a02e3d6ee92e82efd",
+                "reference": "d9b1a37e9351ddde1f19f09a02e3d6ee92e82efd",
                 "shasum": ""
             },
             "require": {
@@ -74,92 +76,18 @@
                 "php": ">=5.3.2"
             },
             "require-dev": {
-                "doctrine/cache": "1.*"
+                "doctrine/cache": "1.*",
+                "phpunit/phpunit": "4.*"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-master": "1.3.x-dev"
                 }
             },
             "autoload": {
                 "psr-0": {
                     "Doctrine\\Common\\Annotations\\": "lib/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jonathan H. Wage",
-                    "email": "jonwage@gmail.com",
-                    "homepage": "http://www.jwage.com/",
-                    "role": "Creator"
-                },
-                {
-                    "name": "Guilherme Blanco",
-                    "email": "guilhermeblanco@gmail.com",
-                    "homepage": "http://www.instaclick.com"
-                },
-                {
-                    "name": "Roman Borschel",
-                    "email": "roman@code-factory.org"
-                },
-                {
-                    "name": "Benjamin Eberlei",
-                    "email": "kontakt@beberlei.de"
-                },
-                {
-                    "name": "Johannes Schmitt",
-                    "email": "schmittjoh@gmail.com",
-                    "homepage": "http://jmsyst.com",
-                    "role": "Developer of wrapped JMSSerializerBundle"
-                }
-            ],
-            "description": "Docblock Annotations Parser",
-            "homepage": "http://www.doctrine-project.org",
-            "keywords": [
-                "annotations",
-                "docblock",
-                "parser"
-            ],
-            "time": "2013-06-16 21:33:03"
-        },
-        {
-            "name": "doctrine/cache",
-            "version": "v1.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/doctrine/cache.git",
-                "reference": "e16d7adf45664a50fa86f515b6d5e7f670130449"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/cache/zipball/e16d7adf45664a50fa86f515b6d5e7f670130449",
-                "reference": "e16d7adf45664a50fa86f515b6d5e7f670130449",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.2"
-            },
-            "conflict": {
-                "doctrine/common": ">2.2,<2.4"
-            },
-            "require-dev": {
-                "phpunit/phpunit": ">=3.7",
-                "satooshi/php-coveralls": "~0.6"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Doctrine\\Common\\Cache\\": "lib/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -189,8 +117,78 @@
                 {
                     "name": "Johannes Schmitt",
                     "email": "schmittjoh@gmail.com",
-                    "homepage": "http://jmsyst.com",
+                    "homepage": "https://github.com/schmittjoh",
                     "role": "Developer of wrapped JMSSerializerBundle"
+                }
+            ],
+            "description": "Docblock Annotations Parser",
+            "homepage": "http://www.doctrine-project.org",
+            "keywords": [
+                "annotations",
+                "docblock",
+                "parser"
+            ],
+            "time": "2014-07-06 15:52:21"
+        },
+        {
+            "name": "doctrine/cache",
+            "version": "v1.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/cache.git",
+                "reference": "cf483685798a72c93bf4206e3dd6358ea07d64e7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/cache/zipball/cf483685798a72c93bf4206e3dd6358ea07d64e7",
+                "reference": "cf483685798a72c93bf4206e3dd6358ea07d64e7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "conflict": {
+                "doctrine/common": ">2.2,<2.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": ">=3.7",
+                "satooshi/php-coveralls": "~0.6"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.4.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Doctrine\\Common\\Cache\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com"
                 }
             ],
             "description": "Caching library offering an object-oriented API for many cache backends",
@@ -199,20 +197,20 @@
                 "cache",
                 "caching"
             ],
-            "time": "2013-10-25 19:04:14"
+            "time": "2014-09-17 14:24:04"
         },
         {
             "name": "doctrine/collections",
-            "version": "v1.1",
+            "version": "v1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/collections.git",
-                "reference": "560f29c39cfcfbcd210e5d549d993a39d898b04b"
+                "reference": "b99c5c46c87126201899afe88ec490a25eedd6a2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/collections/zipball/560f29c39cfcfbcd210e5d549d993a39d898b04b",
-                "reference": "560f29c39cfcfbcd210e5d549d993a39d898b04b",
+                "url": "https://api.github.com/repos/doctrine/collections/zipball/b99c5c46c87126201899afe88ec490a25eedd6a2",
+                "reference": "b99c5c46c87126201899afe88ec490a25eedd6a2",
                 "shasum": ""
             },
             "require": {
@@ -221,7 +219,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.1.x-dev"
+                    "dev-master": "1.2.x-dev"
                 }
             },
             "autoload": {
@@ -256,7 +254,7 @@
                 {
                     "name": "Johannes Schmitt",
                     "email": "schmittjoh@gmail.com",
-                    "homepage": "http://jmsyst.com",
+                    "homepage": "https://github.com/schmittjoh",
                     "role": "Developer of wrapped JMSSerializerBundle"
                 }
             ],
@@ -267,20 +265,20 @@
                 "collections",
                 "iterator"
             ],
-            "time": "2013-03-07 12:15:54"
+            "time": "2014-02-03 23:07:43"
         },
         {
             "name": "doctrine/common",
-            "version": "v2.4.1",
+            "version": "v2.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/common.git",
-                "reference": "ceb18cf9b0230f3ea208b6238130fd415abda0a7"
+                "reference": "5db6ab40e4c531f14dad4ca96a394dfce5d4255b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/common/zipball/ceb18cf9b0230f3ea208b6238130fd415abda0a7",
-                "reference": "ceb18cf9b0230f3ea208b6238130fd415abda0a7",
+                "url": "https://api.github.com/repos/doctrine/common/zipball/5db6ab40e4c531f14dad4ca96a394dfce5d4255b",
+                "reference": "5db6ab40e4c531f14dad4ca96a394dfce5d4255b",
                 "shasum": ""
             },
             "require": {
@@ -290,6 +288,9 @@
                 "doctrine/inflector": "1.*",
                 "doctrine/lexer": "1.*",
                 "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~3.7"
             },
             "type": "library",
             "extra": {
@@ -329,7 +330,7 @@
                 {
                     "name": "Johannes Schmitt",
                     "email": "schmittjoh@gmail.com",
-                    "homepage": "http://jmsyst.com",
+                    "homepage": "https://github.com/schmittjoh",
                     "role": "Developer of wrapped JMSSerializerBundle"
                 }
             ],
@@ -342,7 +343,7 @@
                 "persistence",
                 "spl"
             ],
-            "time": "2013-09-07 10:20:34"
+            "time": "2014-05-21 19:28:51"
         },
         {
             "name": "doctrine/inflector",
@@ -394,7 +395,7 @@
                 {
                     "name": "Johannes Schmitt",
                     "email": "schmittjoh@gmail.com",
-                    "homepage": "http://jmsyst.com",
+                    "homepage": "https://github.com/schmittjoh",
                     "role": "Developer of wrapped JMSSerializerBundle"
                 }
             ],
@@ -513,16 +514,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/hoaproject/Bench.git",
-                "reference": "5f97425c1d56ad4772a17474af7c0b7e64391966"
+                "reference": "a9344ee365c7dec4b731c53872baf40bc6976387"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hoaproject/Bench/zipball/5f97425c1d56ad4772a17474af7c0b7e64391966",
-                "reference": "5f97425c1d56ad4772a17474af7c0b7e64391966",
+                "url": "https://api.github.com/repos/hoaproject/Bench/zipball/a9344ee365c7dec4b731c53872baf40bc6976387",
+                "reference": "a9344ee365c7dec4b731c53872baf40bc6976387",
                 "shasum": ""
             },
             "require": {
-                "hoa/core": "dev-master"
+                "hoa/core": "~2.0"
             },
             "type": "library",
             "autoload": {
@@ -555,7 +556,7 @@
                 "time",
                 "trace"
             ],
-            "time": "2014-01-28 20:20:24"
+            "time": "2014-09-17 15:38:03"
         },
         {
             "name": "hoa/console",
@@ -564,18 +565,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/hoaproject/Console.git",
-                "reference": "e06b1c259870ac2d7a978d2f12ecb4184289a3a6"
+                "reference": "520d628e9f2033a209129e6ba367fa649422caf7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hoaproject/Console/zipball/e06b1c259870ac2d7a978d2f12ecb4184289a3a6",
-                "reference": "e06b1c259870ac2d7a978d2f12ecb4184289a3a6",
+                "url": "https://api.github.com/repos/hoaproject/Console/zipball/520d628e9f2033a209129e6ba367fa649422caf7",
+                "reference": "520d628e9f2033a209129e6ba367fa649422caf7",
                 "shasum": ""
             },
             "require": {
-                "hoa/core": "dev-master",
-                "hoa/stream": "dev-master",
-                "hoa/string": "dev-master"
+                "hoa/core": "~2.0",
+                "hoa/stream": "~0.0",
+                "hoa/string": "~2.0"
             },
             "suggest": {
                 "ext-pcntl": "To enable hoa://Event/Console/Window:resize.",
@@ -616,28 +617,30 @@
                 "parser",
                 "processus",
                 "readline",
+                "terminfo",
+                "tput",
                 "window"
             ],
-            "time": "2014-01-28 16:46:35"
+            "time": "2014-09-17 15:23:29"
         },
         {
             "name": "hoa/core",
-            "version": "dev-master",
+            "version": "2.14.09.17",
             "target-dir": "Hoa/Core",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hoaproject/Core.git",
-                "reference": "07c3c07fe4ce9ab4296c8a4f7b2699373f9a50e3"
+                "reference": "f1a37ea219e88890a03de0bad6aa60d10b505acf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hoaproject/Core/zipball/07c3c07fe4ce9ab4296c8a4f7b2699373f9a50e3",
-                "reference": "07c3c07fe4ce9ab4296c8a4f7b2699373f9a50e3",
+                "url": "https://api.github.com/repos/hoaproject/Core/zipball/f1a37ea219e88890a03de0bad6aa60d10b505acf",
+                "reference": "f1a37ea219e88890a03de0bad6aa60d10b505acf",
                 "shasum": ""
             },
             "require": {
                 "ext-spl": "*",
-                "php": ">=5.3.3"
+                "php": ">=5.4.0"
             },
             "suggest": {
                 "ext-mbstring": "ext/mbstring must be present (or a third implementation).",
@@ -683,26 +686,26 @@
                 "parameter",
                 "protocol"
             ],
-            "time": "2014-01-25 11:52:33"
+            "time": "2014-09-17 14:38:29"
         },
         {
             "name": "hoa/http",
-            "version": "dev-master",
+            "version": "0.14.09.17",
             "target-dir": "Hoa/Http",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hoaproject/Http.git",
-                "reference": "6add55632daa0aa6bdb6a278cda2fe69ba0ba1c3"
+                "reference": "5826270c244700a973b8abdbc990154b3a880ef5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hoaproject/Http/zipball/6add55632daa0aa6bdb6a278cda2fe69ba0ba1c3",
-                "reference": "6add55632daa0aa6bdb6a278cda2fe69ba0ba1c3",
+                "url": "https://api.github.com/repos/hoaproject/Http/zipball/5826270c244700a973b8abdbc990154b3a880ef5",
+                "reference": "5826270c244700a973b8abdbc990154b3a880ef5",
                 "shasum": ""
             },
             "require": {
-                "hoa/core": "dev-master",
-                "hoa/stream": "dev-master"
+                "hoa/core": "~2.0",
+                "hoa/stream": "~0.0"
             },
             "type": "library",
             "autoload": {
@@ -733,26 +736,26 @@
                 "response",
                 "runtime"
             ],
-            "time": "2014-01-07 10:48:56"
+            "time": "2014-09-17 15:18:57"
         },
         {
             "name": "hoa/socket",
-            "version": "dev-master",
+            "version": "0.14.09.17",
             "target-dir": "Hoa/Socket",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hoaproject/Socket.git",
-                "reference": "5249a001a2ae4df32410efe9c7033bf421c8e83a"
+                "reference": "a122920b0cea38906d4362596d687076b1c51001"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hoaproject/Socket/zipball/5249a001a2ae4df32410efe9c7033bf421c8e83a",
-                "reference": "5249a001a2ae4df32410efe9c7033bf421c8e83a",
+                "url": "https://api.github.com/repos/hoaproject/Socket/zipball/a122920b0cea38906d4362596d687076b1c51001",
+                "reference": "a122920b0cea38906d4362596d687076b1c51001",
                 "shasum": ""
             },
             "require": {
-                "hoa/core": "dev-master",
-                "hoa/stream": "dev-master"
+                "hoa/core": "~2.0",
+                "hoa/stream": "~0.0"
             },
             "type": "library",
             "autoload": {
@@ -785,25 +788,25 @@
                 "tcp",
                 "udp"
             ],
-            "time": "2014-01-07 11:00:47"
+            "time": "2014-09-17 15:40:06"
         },
         {
             "name": "hoa/stream",
-            "version": "dev-master",
+            "version": "0.14.09.17",
             "target-dir": "Hoa/Stream",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hoaproject/Stream.git",
-                "reference": "d1d2388abd3581dff63a44dff9f224c006e06c21"
+                "reference": "e3a4b7f12989333072b59a7b0072d28d28a640f1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hoaproject/Stream/zipball/d1d2388abd3581dff63a44dff9f224c006e06c21",
-                "reference": "d1d2388abd3581dff63a44dff9f224c006e06c21",
+                "url": "https://api.github.com/repos/hoaproject/Stream/zipball/e3a4b7f12989333072b59a7b0072d28d28a640f1",
+                "reference": "e3a4b7f12989333072b59a7b0072d28d28a640f1",
                 "shasum": ""
             },
             "require": {
-                "hoa/core": "dev-master"
+                "hoa/core": "~2.0"
             },
             "type": "library",
             "autoload": {
@@ -839,26 +842,26 @@
                 "stream",
                 "wrapper"
             ],
-            "time": "2014-01-26 21:19:23"
+            "time": "2014-09-17 14:43:41"
         },
         {
             "name": "hoa/string",
-            "version": "dev-master",
+            "version": "2.14.09.16",
             "target-dir": "Hoa/String",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hoaproject/String.git",
-                "reference": "180be239cac5bebc3c92a8f02faaa597738728b5"
+                "reference": "506d637bebd20dd1e9591575f5c17dbb31c10079"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hoaproject/String/zipball/180be239cac5bebc3c92a8f02faaa597738728b5",
-                "reference": "180be239cac5bebc3c92a8f02faaa597738728b5",
+                "url": "https://api.github.com/repos/hoaproject/String/zipball/506d637bebd20dd1e9591575f5c17dbb31c10079",
+                "reference": "506d637bebd20dd1e9591575f5c17dbb31c10079",
                 "shasum": ""
             },
             "require": {
                 "ext-iconv": "*",
-                "hoa/core": "dev-master"
+                "hoa/core": "~2.0"
             },
             "suggest": {
                 "ext-intl": "To get a better Hoa\\String::toAscii() and Hoa\\String::compareTo()."
@@ -891,7 +894,7 @@
                 "string",
                 "unicode"
             ],
-            "time": "2014-01-07 11:01:30"
+            "time": "2014-09-17 15:20:54"
         },
         {
             "name": "hoa/websocket",
@@ -900,18 +903,21 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/hoaproject/Websocket.git",
-                "reference": "72dc967565d83313985dcbb167c7b74a47a3a866"
+                "reference": "25eb7a57f7825f562c88a6c87e593db25c3a9814"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hoaproject/Websocket/zipball/72dc967565d83313985dcbb167c7b74a47a3a866",
-                "reference": "72dc967565d83313985dcbb167c7b74a47a3a866",
+                "url": "https://api.github.com/repos/hoaproject/Websocket/zipball/25eb7a57f7825f562c88a6c87e593db25c3a9814",
+                "reference": "25eb7a57f7825f562c88a6c87e593db25c3a9814",
                 "shasum": ""
             },
             "require": {
-                "hoa/core": "dev-master",
-                "hoa/http": "dev-master",
-                "hoa/socket": "dev-master"
+                "hoa/core": "~2.0",
+                "hoa/http": "~0.0",
+                "hoa/socket": "~0.0"
+            },
+            "suggest": {
+                "ext-openssl": "To get a better security when exchanging messages."
             },
             "type": "library",
             "autoload": {
@@ -945,7 +951,7 @@
                 "server",
                 "websocket"
             ],
-            "time": "2014-01-28 13:08:56"
+            "time": "2014-09-16 21:12:13"
         },
         {
             "name": "hoathis/bench-bundle",
@@ -953,13 +959,13 @@
             "target-dir": "Hoathis/Bundle/BenchBundle",
             "source": {
                 "type": "git",
-                "url": "https://github.com/jubianchi/HoathisBenchBundle.git",
-                "reference": "0c951b9531446b5054d15faeaa4d973c4dd17902"
+                "url": "https://github.com/hoaproject/Contributions-Symfony-BenchBundle.git",
+                "reference": "ee7b21c6bb078e86396ee27bfc19f152c941a546"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jubianchi/HoathisBenchBundle/zipball/0c951b9531446b5054d15faeaa4d973c4dd17902",
-                "reference": "0c951b9531446b5054d15faeaa4d973c4dd17902",
+                "url": "https://api.github.com/repos/hoaproject/Contributions-Symfony-BenchBundle/zipball/ee7b21c6bb078e86396ee27bfc19f152c941a546",
+                "reference": "ee7b21c6bb078e86396ee27bfc19f152c941a546",
                 "shasum": ""
             },
             "require": {
@@ -1006,7 +1012,7 @@
                 "library",
                 "symfony"
             ],
-            "time": "2013-11-02 18:50:16"
+            "time": "2014-08-25 08:00:26"
         },
         {
             "name": "hoathis/console-bundle",
@@ -1078,13 +1084,13 @@
             "target-dir": "Hoathis/SymfonyConsoleBridge",
             "source": {
                 "type": "git",
-                "url": "https://github.com/jubianchi/HoathisSymfonyConsoleBridge.git",
-                "reference": "cd7c3d8edf482b844579dc0ecd8d24829fe83eb1"
+                "url": "https://github.com/hoaproject/Contributions-Symfony-ConsoleBridge.git",
+                "reference": "baec282528f0a0a05666653d9c1c4770d9ee5655"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jubianchi/HoathisSymfonyConsoleBridge/zipball/cd7c3d8edf482b844579dc0ecd8d24829fe83eb1",
-                "reference": "cd7c3d8edf482b844579dc0ecd8d24829fe83eb1",
+                "url": "https://api.github.com/repos/hoaproject/Contributions-Symfony-ConsoleBridge/zipball/baec282528f0a0a05666653d9c1c4770d9ee5655",
+                "reference": "baec282528f0a0a05666653d9c1c4770d9ee5655",
                 "shasum": ""
             },
             "require": {
@@ -1093,7 +1099,7 @@
                 "hoa/stream": "*@dev",
                 "hoa/string": "*@dev",
                 "php": ">=5.3.3",
-                "symfony/console": "~2.3.6"
+                "symfony/console": ">=2.3.6,<2.5.0"
             },
             "require-dev": {
                 "atoum/atoum": "dev-master"
@@ -1101,7 +1107,7 @@
             "type": "library",
             "autoload": {
                 "psr-0": {
-                    "Hoathis\\SymfonyConsoleBridge": "."
+                    "Hoathis\\SymfonyConsoleBridge\\": "."
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1127,10 +1133,11 @@
             "keywords": [
                 "Bridge",
                 "console",
+                "hoa",
                 "library",
                 "symfony"
             ],
-            "time": "2014-01-30 20:27:27"
+            "time": "2014-05-26 08:29:50"
         },
         {
             "name": "incenteev/composer-parameter-handler",
@@ -1257,16 +1264,16 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "1.7.0",
+            "version": "1.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "6225b22de9dcf36546be3a0b2fa8e3d986153f57"
+                "reference": "25b16e801979098cb2f120e697bfce454b18bf23"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/6225b22de9dcf36546be3a0b2fa8e3d986153f57",
-                "reference": "6225b22de9dcf36546be3a0b2fa8e3d986153f57",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/25b16e801979098cb2f120e697bfce454b18bf23",
+                "reference": "25b16e801979098cb2f120e697bfce454b18bf23",
                 "shasum": ""
             },
             "require": {
@@ -1274,11 +1281,11 @@
                 "psr/log": "~1.0"
             },
             "require-dev": {
-                "aws/aws-sdk-php": "~2.4.8",
-                "doctrine/couchdb": "dev-master",
-                "mlehner/gelf-php": "1.0.*",
+                "aws/aws-sdk-php": "~2.4, >2.4.8",
+                "doctrine/couchdb": "~1.0@dev",
+                "graylog2/gelf-php": "~1.0",
                 "phpunit/phpunit": "~3.7.0",
-                "raven/raven": "0.5.*",
+                "raven/raven": "~0.5",
                 "ruflin/elastica": "0.90.*"
             },
             "suggest": {
@@ -1286,19 +1293,20 @@
                 "doctrine/couchdb": "Allow sending log messages to a CouchDB server",
                 "ext-amqp": "Allow sending log messages to an AMQP server (1.0+ required)",
                 "ext-mongo": "Allow sending log messages to a MongoDB server",
-                "mlehner/gelf-php": "Allow sending log messages to a GrayLog2 server",
+                "graylog2/gelf-php": "Allow sending log messages to a GrayLog2 server",
                 "raven/raven": "Allow sending log messages to a Sentry server",
+                "rollbar/rollbar": "Allow sending log messages to Rollbar",
                 "ruflin/elastica": "Allow sending log messages to an Elastic Search server"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.7.x-dev"
+                    "dev-master": "1.10.x-dev"
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Monolog": "src/"
+                "psr-4": {
+                    "Monolog\\": "src/Monolog"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1320,7 +1328,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2013-11-14 19:48:31"
+            "time": "2014-06-04 16:30:04"
         },
         {
             "name": "psr/log",
@@ -1396,7 +1404,9 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
                 }
             ],
             "description": "The base bundle for the Symfony Distributions",
@@ -1443,7 +1453,9 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
                 }
             ],
             "description": "This bundle provides a way to configure your controllers with annotations",
@@ -1495,7 +1507,9 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
                 }
             ],
             "description": "This bundle generates code for you",
@@ -1655,7 +1669,9 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
                 },
                 {
                     "name": "Symfony Community",
@@ -1764,7 +1780,9 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
                 },
                 {
                     "name": "Symfony Community",
@@ -1813,7 +1831,9 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
                 }
             ],
             "description": "Common additional features for Twig that do not directly belong in core",
@@ -1827,16 +1847,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v1.15.0",
+            "version": "v1.16.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabpot/Twig.git",
-                "reference": "85e4ff98000157ff753d934b9f13659a953f5666"
+                "reference": "8ce37115802e257a984a82d38254884085060024"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Twig/zipball/85e4ff98000157ff753d934b9f13659a953f5666",
-                "reference": "85e4ff98000157ff753d934b9f13659a953f5666",
+                "url": "https://api.github.com/repos/fabpot/Twig/zipball/8ce37115802e257a984a82d38254884085060024",
+                "reference": "8ce37115802e257a984a82d38254884085060024",
                 "shasum": ""
             },
             "require": {
@@ -1845,7 +1865,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.15-dev"
+                    "dev-master": "1.16-dev"
                 }
             },
             "autoload": {
@@ -1860,11 +1880,19 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
                 },
                 {
                     "name": "Armin Ronacher",
-                    "email": "armin.ronacher@active-4.com"
+                    "email": "armin.ronacher@active-4.com",
+                    "role": "Project Founder"
+                },
+                {
+                    "name": "Twig Team",
+                    "homepage": "https://github.com/fabpot/Twig/graphs/contributors",
+                    "role": "Contributors"
                 }
             ],
             "description": "Twig, the flexible, fast, and secure template language for PHP",
@@ -1872,34 +1900,24 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2013-12-06 07:47:10"
+            "time": "2014-07-05 12:19:05"
         }
     ],
-    "packages-dev": [
-
-    ],
-    "aliases": [
-
-    ],
+    "packages-dev": [],
+    "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "hoa/core": 20,
         "hoathis/console-bundle": 20,
         "hoathis/symfony-console-bridge": 20,
         "hoa/console": 20,
-        "hoa/string": 20,
         "hoathis/bench-bundle": 20,
         "hoa/bench": 20,
         "atipik/hoa-websocket-bundle": 20,
-        "hoa/http": 20,
-        "hoa/socket": 20,
-        "hoa/stream": 20,
         "hoa/websocket": 20
     },
+    "prefer-stable": false,
     "platform": {
         "php": ">=5.3.3"
     },
-    "platform-dev": [
-
-    ]
+    "platform-dev": []
 }
