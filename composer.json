@@ -1,6 +1,8 @@
 {
     "name": "symfony/framework-standard-edition",
-    "license": "MIT",
+    "keywords": ["hoa", "symfony", "framework"],
+    "homepage": "http://hoa-project.net/",
+    "license": "BSD-3-Clause",
     "type": "project",
     "description": "The \"Symfony Standard Edition\" distribution",
     "autoload": {
@@ -23,10 +25,12 @@
         "fzaninotto/faker": "1.2.*",
 
         "hoa/core": ">=1.0,<3.0",
-        "hoa/console": ">=1.0,<3.0",
-        "hoa/bench": ">=1.0,<3.0",
-        "hoa/router": ">=1.0,<=3.0",
-        "hoa/dispatcher": "<=1.0",
+        "hoa/router": ">=1.0,<3.0",
+        "hoa/dispatcher": "<1.0",
+
+        "hoathis/symfony-console-bundle": ">=1.0,<2.0",
+        "hoathis/bench-bundle": "dev-rush-release@dev",
+        "hoathis/symfony-resource-locator-bundle": "dev-master@dev",
 
         "atipik/hoa-websocket-bundle" : "1.*@dev"
     },
@@ -49,7 +53,8 @@
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
-        ]
+        ],
+        "test": "app/console --env=test atoum"
     },
     "config": {
         "bin-dir": "bin"

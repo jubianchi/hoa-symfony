@@ -1,3 +1,4 @@
 site :opscode
 
-cookbook 'redis'
+cookbook 'nginx'
+cookbook 'mysql'

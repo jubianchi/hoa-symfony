@@ -1,10 +1,26 @@
+image: symfony2
+
+env:
+    - SYMFONY_ENV=prod
+
+writable:
+    - app/logs
+    - app/cache
+
 build:
-  - curl -L https://www.opscode.com/chef/install.sh | bash
   - apt-get update
-  - apt-get install -y curl wget ruby-dev
-  - gem install bundler --no-ri --no-rdoc
-  - bundle install --deployment
-  - bundle exec berks install -p cookbooks
-  - chef-solo -c solo.rb
+
+  # Install Opscode Chef
+  # - curl -L https://www.opscode.com/chef/install.sh | bash
+  # - apt-get install -y build-essential ruby-dev
+
+  # Install Berkshelf
+  # - gem install bundler --no-ri --no-rdoc
+  # - bundle install --deployment
+
+  # Fetch cookbooks and run Chef
+  # - bundle exec berks vendor vendor/cookbooks
+  # - chef-solo -c solo.rb
+
   - composer install --ansi --no-progress --no-dev --no-interaction
-  - start-stop-daemon --start --background --quiet --pidfile /tmp/websocketserver.pid --exec /var/www/app/console hoa:websocketserver
+  - start-stop-daemon --start --background --quiet --pidfile /tmp/websocketserver.pid --exec /app/app/console hoa:websocketserver
