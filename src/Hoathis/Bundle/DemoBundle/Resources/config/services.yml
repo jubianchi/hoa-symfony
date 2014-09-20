@@ -1,0 +1,22 @@
+parameters:
+    hoathis.demo.faker.factory.class: Faker\Factory
+
+services:
+    hoathis.demo.faker:
+        class: %hoathis.demo.faker.factory.class%
+        factory_class: %hoathis.demo.faker.factory.class%
+        factory_method: create
+        arguments:
+            - fr_FR
+
+    hoathis.demo.websocket.echoback:
+        class: Hoathis\Bundle\DemoBundle\WebSocket\Module\Chat
+        tags:
+            - { name: atipik_hoa_web_socket.module }
+
+    hoathis.demo.websocket.command:
+        class: Hoathis\Bundle\DemoBundle\WebSocket\Module\Faker
+        arguments:
+            - @hoathis.demo.faker
+        tags:
+            - { name: atipik_hoa_web_socket.module }

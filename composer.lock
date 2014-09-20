@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c719fee0f425b418891ea38239e337e4",
+    "hash": "53e940bbcd6767d37b90546639b0399b",
     "packages": [
         {
             "name": "atipik/hoa-websocket-bundle",
@@ -13,16 +13,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Atipik/Hoa-WebSocket-Bundle.git",
-                "reference": "0cfdc8ec7af6a0a21eea6fe321378680dac43500"
+                "reference": "be0e0567a9cce5e106399a186b6a81ff1307c93e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Atipik/Hoa-WebSocket-Bundle/zipball/0cfdc8ec7af6a0a21eea6fe321378680dac43500",
-                "reference": "0cfdc8ec7af6a0a21eea6fe321378680dac43500",
+                "url": "https://api.github.com/repos/Atipik/Hoa-WebSocket-Bundle/zipball/be0e0567a9cce5e106399a186b6a81ff1307c93e",
+                "reference": "be0e0567a9cce5e106399a186b6a81ff1307c93e",
                 "shasum": ""
             },
             "require": {
-                "hoa/websocket": "dev-master",
+                "hoa/websocket": "~2.0",
                 "php": ">=5.4",
                 "symfony/console": "~2.3",
                 "symfony/framework-bundle": "~2.3"
@@ -55,7 +55,7 @@
                     "email": "geek@atipik.fr"
                 }
             ],
-            "time": "2014-09-18 08:17:22"
+            "time": "2014-09-19 12:20:37"
         },
         {
             "name": "doctrine/annotations",
@@ -346,6 +346,144 @@
             "time": "2014-05-21 19:28:51"
         },
         {
+            "name": "doctrine/dbal",
+            "version": "v2.4.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/dbal.git",
+                "reference": "fec965d330c958e175c39e61c3f6751955af32d0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/fec965d330c958e175c39e61c3f6751955af32d0",
+                "reference": "fec965d330c958e175c39e61c3f6751955af32d0",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/common": "~2.4",
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*",
+                "symfony/console": "~2.0"
+            },
+            "suggest": {
+                "symfony/console": "Allows use of the command line interface"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Doctrine\\DBAL\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com",
+                    "homepage": "http://www.jwage.com/",
+                    "role": "Creator"
+                },
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com",
+                    "homepage": "http://www.instaclick.com"
+                },
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                }
+            ],
+            "description": "Database Abstraction Layer",
+            "homepage": "http://www.doctrine-project.org",
+            "keywords": [
+                "database",
+                "dbal",
+                "persistence",
+                "queryobject"
+            ],
+            "time": "2014-01-01 16:43:57"
+        },
+        {
+            "name": "doctrine/doctrine-bundle",
+            "version": "v1.2.0",
+            "target-dir": "Doctrine/Bundle/DoctrineBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/DoctrineBundle.git",
+                "reference": "765b0d87fcc3e839c74817b7211258cbef3a4fb9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/DoctrineBundle/zipball/765b0d87fcc3e839c74817b7211258cbef3a4fb9",
+                "reference": "765b0d87fcc3e839c74817b7211258cbef3a4fb9",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/dbal": ">=2.2,<2.5-dev",
+                "jdorn/sql-formatter": "~1.1",
+                "php": ">=5.3.2",
+                "symfony/doctrine-bridge": "~2.2",
+                "symfony/framework-bundle": "~2.2"
+            },
+            "require-dev": {
+                "doctrine/orm": ">=2.2,<2.5-dev",
+                "symfony/validator": "~2.2",
+                "symfony/yaml": "~2.2"
+            },
+            "suggest": {
+                "doctrine/orm": "The Doctrine ORM integration is optional in the bundle.",
+                "symfony/web-profiler-bundle": "to use the data collector"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Doctrine\\Bundle\\DoctrineBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                }
+            ],
+            "description": "Symfony DoctrineBundle",
+            "homepage": "http://www.doctrine-project.org",
+            "keywords": [
+                "database",
+                "dbal",
+                "orm",
+                "persistence"
+            ],
+            "time": "2013-03-25 20:13:59"
+        },
+        {
             "name": "doctrine/inflector",
             "version": "v1.0",
             "source": {
@@ -462,6 +600,82 @@
             "time": "2013-01-12 18:59:04"
         },
         {
+            "name": "doctrine/orm",
+            "version": "v2.4.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/doctrine2.git",
+                "reference": "fc19c3b53dcd00e6584db40669fdd699c4671f97"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/fc19c3b53dcd00e6584db40669fdd699c4671f97",
+                "reference": "fc19c3b53dcd00e6584db40669fdd699c4671f97",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/collections": "~1.1",
+                "doctrine/dbal": "~2.4",
+                "ext-pdo": "*",
+                "php": ">=5.3.2",
+                "symfony/console": "~2.0"
+            },
+            "require-dev": {
+                "satooshi/php-coveralls": "dev-master",
+                "symfony/yaml": "~2.1"
+            },
+            "suggest": {
+                "symfony/yaml": "If you want to use YAML Metadata Mapping Driver"
+            },
+            "bin": [
+                "bin/doctrine",
+                "bin/doctrine.php"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.4.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Doctrine\\ORM\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com",
+                    "homepage": "http://www.jwage.com/",
+                    "role": "Creator"
+                },
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com",
+                    "homepage": "http://www.instaclick.com"
+                },
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                }
+            ],
+            "description": "Object-Relational-Mapper for PHP",
+            "homepage": "http://www.doctrine-project.org",
+            "keywords": [
+                "database",
+                "orm"
+            ],
+            "time": "2014-07-11 03:05:53"
+        },
+        {
             "name": "fzaninotto/faker",
             "version": "v1.2.0",
             "source": {
@@ -509,7 +723,7 @@
         },
         {
             "name": "hoa/bench",
-            "version": "dev-master",
+            "version": "2.14.09.17",
             "target-dir": "Hoa/Bench",
             "source": {
                 "type": "git",
@@ -560,7 +774,7 @@
         },
         {
             "name": "hoa/console",
-            "version": "dev-master",
+            "version": "2.14.09.17",
             "target-dir": "Hoa/Console",
             "source": {
                 "type": "git",
@@ -689,6 +903,57 @@
             "time": "2014-09-17 14:38:29"
         },
         {
+            "name": "hoa/dispatcher",
+            "version": "0.14.09.17",
+            "target-dir": "Hoa/Dispatcher",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hoaproject/Dispatcher.git",
+                "reference": "888bbfb3e11627f2018c5906d83cf22a4e5f2727"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hoaproject/Dispatcher/zipball/888bbfb3e11627f2018c5906d83cf22a4e5f2727",
+                "reference": "888bbfb3e11627f2018c5906d83cf22a4e5f2727",
+                "shasum": ""
+            },
+            "require": {
+                "hoa/core": "~2.0"
+            },
+            "suggest": {
+                "hoa/router": "Provide routers.",
+                "hoa/view": "Provide view interface."
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Hoa\\Dispatcher": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Ivan Enderlin",
+                    "email": "ivan.enderlin@hoa-project.net"
+                },
+                {
+                    "name": "Hoa community",
+                    "homepage": "http://hoa-project.net/"
+                }
+            ],
+            "description": "The Hoa\\Dispatcher library.",
+            "homepage": "http://hoa-project.net/",
+            "keywords": [
+                "dispatcher",
+                "kit",
+                "library"
+            ],
+            "time": "2014-09-17 15:17:11"
+        },
+        {
             "name": "hoa/http",
             "version": "0.14.09.17",
             "target-dir": "Hoa/Http",
@@ -737,6 +1002,54 @@
                 "runtime"
             ],
             "time": "2014-09-17 15:18:57"
+        },
+        {
+            "name": "hoa/router",
+            "version": "2.14.09.17",
+            "target-dir": "Hoa/Router",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hoaproject/Router.git",
+                "reference": "0848aabf68af296cd92966940f96efc7f5bdf1a5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hoaproject/Router/zipball/0848aabf68af296cd92966940f96efc7f5bdf1a5",
+                "reference": "0848aabf68af296cd92966940f96efc7f5bdf1a5",
+                "shasum": ""
+            },
+            "require": {
+                "hoa/core": "~2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Hoa\\Router": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Ivan Enderlin",
+                    "email": "ivan.enderlin@hoa-project.net"
+                },
+                {
+                    "name": "Hoa community",
+                    "homepage": "http://hoa-project.net/"
+                }
+            ],
+            "description": "The Hoa\\Router library.",
+            "homepage": "http://hoa-project.net/",
+            "keywords": [
+                "cli",
+                "http",
+                "library",
+                "router"
+            ],
+            "time": "2014-09-17 15:15:07"
         },
         {
             "name": "hoa/socket",
@@ -898,7 +1211,7 @@
         },
         {
             "name": "hoa/websocket",
-            "version": "dev-master",
+            "version": "2.14.09.17",
             "target-dir": "Hoa/Websocket",
             "source": {
                 "type": "git",
@@ -954,192 +1267,6 @@
             "time": "2014-09-16 21:12:13"
         },
         {
-            "name": "hoathis/bench-bundle",
-            "version": "dev-master",
-            "target-dir": "Hoathis/Bundle/BenchBundle",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/hoaproject/Contributions-Symfony-BenchBundle.git",
-                "reference": "ee7b21c6bb078e86396ee27bfc19f152c941a546"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/hoaproject/Contributions-Symfony-BenchBundle/zipball/ee7b21c6bb078e86396ee27bfc19f152c941a546",
-                "reference": "ee7b21c6bb078e86396ee27bfc19f152c941a546",
-                "shasum": ""
-            },
-            "require": {
-                "hoa/bench": "*",
-                "php": ">=5.3.3",
-                "symfony/config": "~2.3.6",
-                "symfony/console": "~2.3.6",
-                "symfony/dependency-injection": "~2.3.6",
-                "symfony/http-kernel": "~2.3.6",
-                "twig/twig": "~1.0"
-            },
-            "require-dev": {
-                "atoum/atoum": "dev-master"
-            },
-            "type": "symfony-bundle",
-            "autoload": {
-                "psr-0": {
-                    "Hoathis\\Bundle\\BenchBundle": "."
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Ivan Enderlin",
-                    "email": "ivan.enderlin@hoa-project.net"
-                },
-                {
-                    "name": "Hoa community",
-                    "homepage": "http://hoa-project.net/"
-                },
-                {
-                    "name": "Julien Bianchi",
-                    "email": "julien.bianchi@hoa-project.net"
-                }
-            ],
-            "description": "The Hoa\\Bench Symfony 2 bundle.",
-            "homepage": "http://hoa-project.net/",
-            "keywords": [
-                "bench",
-                "bundle",
-                "library",
-                "symfony"
-            ],
-            "time": "2014-08-25 08:00:26"
-        },
-        {
-            "name": "hoathis/console-bundle",
-            "version": "dev-master",
-            "target-dir": "Hoathis/Bundle/ConsoleBundle",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/jubianchi/HoathisConsoleBundle.git",
-                "reference": "332f1e70094b76f661c1e31160c05110a950fe1e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/jubianchi/HoathisConsoleBundle/zipball/332f1e70094b76f661c1e31160c05110a950fe1e",
-                "reference": "332f1e70094b76f661c1e31160c05110a950fe1e",
-                "shasum": ""
-            },
-            "require": {
-                "hoa/console": "*@dev",
-                "hoa/core": "*@dev",
-                "hoa/stream": "*@dev",
-                "hoa/string": "*@dev",
-                "hoathis/symfony-console-bridge": "dev-master",
-                "php": ">=5.3.3",
-                "symfony/config": "~2.3.6",
-                "symfony/console": "~2.3.6",
-                "symfony/dependency-injection": "~2.3.6",
-                "symfony/http-kernel": "~2.3.6"
-            },
-            "require-dev": {
-                "atoum/atoum": "dev-master"
-            },
-            "type": "symfony-bundle",
-            "autoload": {
-                "psr-0": {
-                    "Hoathis\\Bundle\\ConsoleBundle": "."
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Ivan Enderlin",
-                    "email": "ivan.enderlin@hoa-project.net"
-                },
-                {
-                    "name": "Hoa community",
-                    "homepage": "http://hoa-project.net/"
-                },
-                {
-                    "name": "Julien Bianchi",
-                    "email": "julien.bianchi@hoa-project.net"
-                }
-            ],
-            "description": "The Hoa\\Console Symfony 2 bundle.",
-            "homepage": "http://hoa-project.net/",
-            "keywords": [
-                "bundle",
-                "console",
-                "library",
-                "symfony"
-            ],
-            "time": "2014-01-30 20:48:36"
-        },
-        {
-            "name": "hoathis/symfony-console-bridge",
-            "version": "dev-master",
-            "target-dir": "Hoathis/SymfonyConsoleBridge",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/hoaproject/Contributions-Symfony-ConsoleBridge.git",
-                "reference": "baec282528f0a0a05666653d9c1c4770d9ee5655"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/hoaproject/Contributions-Symfony-ConsoleBridge/zipball/baec282528f0a0a05666653d9c1c4770d9ee5655",
-                "reference": "baec282528f0a0a05666653d9c1c4770d9ee5655",
-                "shasum": ""
-            },
-            "require": {
-                "hoa/console": "*@dev",
-                "hoa/core": "*@dev",
-                "hoa/stream": "*@dev",
-                "hoa/string": "*@dev",
-                "php": ">=5.3.3",
-                "symfony/console": ">=2.3.6,<2.5.0"
-            },
-            "require-dev": {
-                "atoum/atoum": "dev-master"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Hoathis\\SymfonyConsoleBridge\\": "."
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Ivan Enderlin",
-                    "email": "ivan.enderlin@hoa-project.net"
-                },
-                {
-                    "name": "Hoa community",
-                    "homepage": "http://hoa-project.net/"
-                },
-                {
-                    "name": "Julien Bianchi",
-                    "email": "julien.bianchi@hoa-project.net"
-                }
-            ],
-            "description": "The Hoa\\Console Symfony 2 bridge.",
-            "homepage": "http://hoa-project.net/",
-            "keywords": [
-                "Bridge",
-                "console",
-                "hoa",
-                "library",
-                "symfony"
-            ],
-            "time": "2014-05-26 08:29:50"
-        },
-        {
             "name": "incenteev/composer-parameter-handler",
             "version": "v2.1.0",
             "target-dir": "Incenteev/ParameterHandler",
@@ -1190,6 +1317,56 @@
                 "parameters management"
             ],
             "time": "2013-12-07 10:10:39"
+        },
+        {
+            "name": "jdorn/sql-formatter",
+            "version": "v1.2.17",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jdorn/sql-formatter.git",
+                "reference": "64990d96e0959dff8e059dfcdc1af130728d92bc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jdorn/sql-formatter/zipball/64990d96e0959dff8e059dfcdc1af130728d92bc",
+                "reference": "64990d96e0959dff8e059dfcdc1af130728d92bc",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3.x-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "lib"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeremy Dorn",
+                    "email": "jeremy@jeremydorn.com",
+                    "homepage": "http://jeremydorn.com/"
+                }
+            ],
+            "description": "a PHP SQL highlighting library",
+            "homepage": "https://github.com/jdorn/sql-formatter/",
+            "keywords": [
+                "highlight",
+                "sql"
+            ],
+            "time": "2014-01-12 16:20:24"
         },
         {
             "name": "kriswallsmith/assetic",
@@ -1370,17 +1547,17 @@
         },
         {
             "name": "sensio/distribution-bundle",
-            "version": "v2.3.4",
+            "version": "v2.3.5",
             "target-dir": "Sensio/Bundle/DistributionBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/SensioDistributionBundle.git",
-                "reference": "66df91b4bd637a83299d8072aed3658bfd3b3021"
+                "reference": "715fcb65f9a4841ffaf40c0bf050329d74c84cad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/SensioDistributionBundle/zipball/66df91b4bd637a83299d8072aed3658bfd3b3021",
-                "reference": "66df91b4bd637a83299d8072aed3658bfd3b3021",
+                "url": "https://api.github.com/repos/sensiolabs/SensioDistributionBundle/zipball/715fcb65f9a4841ffaf40c0bf050329d74c84cad",
+                "reference": "715fcb65f9a4841ffaf40c0bf050329d74c84cad",
                 "shasum": ""
             },
             "require": {
@@ -1404,9 +1581,7 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com",
-                    "homepage": "http://fabien.potencier.org",
-                    "role": "Lead Developer"
+                    "email": "fabien@symfony.com"
                 }
             ],
             "description": "The base bundle for the Symfony Distributions",
@@ -1414,7 +1589,7 @@
                 "configuration",
                 "distribution"
             ],
-            "time": "2013-08-22 05:04:53"
+            "time": "2014-09-03 12:25:05"
         },
         {
             "name": "sensio/framework-extra-bundle",
@@ -1467,17 +1642,17 @@
         },
         {
             "name": "sensio/generator-bundle",
-            "version": "v2.3.4",
+            "version": "v2.3.5",
             "target-dir": "Sensio/Bundle/GeneratorBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/SensioGeneratorBundle.git",
-                "reference": "4a7b126e9c22f858e3584b19ddce6e5bdd7677ee"
+                "reference": "8b7a33aa3d22388443b6de0b0cf184122e9f60d2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/SensioGeneratorBundle/zipball/4a7b126e9c22f858e3584b19ddce6e5bdd7677ee",
-                "reference": "4a7b126e9c22f858e3584b19ddce6e5bdd7677ee",
+                "url": "https://api.github.com/repos/sensiolabs/SensioGeneratorBundle/zipball/8b7a33aa3d22388443b6de0b0cf184122e9f60d2",
+                "reference": "8b7a33aa3d22388443b6de0b0cf184122e9f60d2",
                 "shasum": ""
             },
             "require": {
@@ -1513,7 +1688,59 @@
                 }
             ],
             "description": "This bundle generates code for you",
-            "time": "2013-08-21 18:09:35"
+            "time": "2014-04-28 14:01:06"
+        },
+        {
+            "name": "swiftmailer/swiftmailer",
+            "version": "v5.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/swiftmailer/swiftmailer.git",
+                "reference": "e02f71a35436af4bd58a1bd90116089e632e29e1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/e02f71a35436af4bd58a1bd90116089e632e29e1",
+                "reference": "e02f71a35436af4bd58a1bd90116089e632e29e1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.4"
+            },
+            "require-dev": {
+                "mockery/mockery": "~0.9.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "5.2-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "lib/swift_required.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Chris Corbyn"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Swiftmailer, free feature-rich PHP mailer",
+            "homepage": "http://swiftmailer.org",
+            "keywords": [
+                "mail",
+                "mailer"
+            ],
+            "time": "2014-09-20 07:17:36"
         },
         {
             "name": "symfony/assetic-bundle",
@@ -1580,21 +1807,22 @@
         },
         {
             "name": "symfony/icu",
-            "version": "v1.1.0",
+            "version": "v1.2.2",
             "target-dir": "Symfony/Component/Icu",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Icu.git",
-                "reference": "b4081efff21a8a85c57789a39f454fed244f8e46"
+                "reference": "d4d85d6055b87f394d941b45ddd3a9173e1e3d2a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Icu/zipball/b4081efff21a8a85c57789a39f454fed244f8e46",
-                "reference": "b4081efff21a8a85c57789a39f454fed244f8e46",
+                "url": "https://api.github.com/repos/symfony/Icu/zipball/d4d85d6055b87f394d941b45ddd3a9173e1e3d2a",
+                "reference": "d4d85d6055b87f394d941b45ddd3a9173e1e3d2a",
                 "shasum": ""
             },
             "require": {
-                "lib-icu": ">=3.8",
+                "ext-intl": "*",
+                "lib-icu": ">=4.4",
                 "php": ">=5.3.3",
                 "symfony/intl": "~2.3"
             },
@@ -1624,7 +1852,7 @@
                 "icu",
                 "intl"
             ],
-            "time": "2013-06-03 18:32:40"
+            "time": "2014-07-25 09:58:17"
         },
         {
             "name": "symfony/monolog-bundle",
@@ -1687,17 +1915,74 @@
             "time": "2013-05-27 18:06:55"
         },
         {
-            "name": "symfony/symfony",
-            "version": "v2.3.9",
+            "name": "symfony/swiftmailer-bundle",
+            "version": "v2.3.7",
+            "target-dir": "Symfony/Bundle/SwiftmailerBundle",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/symfony.git",
-                "reference": "ee1e0f2ef882ccd6a53ff91e5ffc39a22b6a6b74"
+                "url": "https://github.com/symfony/SwiftmailerBundle.git",
+                "reference": "e98defd402f72e8b54a029ba4d3ac4cb51dc3577"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/ee1e0f2ef882ccd6a53ff91e5ffc39a22b6a6b74",
-                "reference": "ee1e0f2ef882ccd6a53ff91e5ffc39a22b6a6b74",
+                "url": "https://api.github.com/repos/symfony/SwiftmailerBundle/zipball/e98defd402f72e8b54a029ba4d3ac4cb51dc3577",
+                "reference": "e98defd402f72e8b54a029ba4d3ac4cb51dc3577",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2",
+                "swiftmailer/swiftmailer": ">=4.2.0,~5.0",
+                "symfony/swiftmailer-bridge": "~2.1"
+            },
+            "require-dev": {
+                "symfony/config": "~2.1",
+                "symfony/dependency-injection": "~2.1",
+                "symfony/http-kernel": "~2.1",
+                "symfony/yaml": "~2.1"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Bundle\\SwiftmailerBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony SwiftmailerBundle",
+            "homepage": "http://symfony.com",
+            "time": "2014-04-05 17:15:52"
+        },
+        {
+            "name": "symfony/symfony",
+            "version": "v2.3.19",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/symfony.git",
+                "reference": "1fc05758044fa1cf54460d7d4aff5f55b0f1b0db"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/1fc05758044fa1cf54460d7d4aff5f55b0f1b0db",
+                "reference": "1fc05758044fa1cf54460d7d4aff5f55b0f1b0db",
                 "shasum": ""
             },
             "require": {
@@ -1705,7 +1990,7 @@
                 "php": ">=5.3.3",
                 "psr/log": "~1.0",
                 "symfony/icu": "~1.0",
-                "twig/twig": "~1.11"
+                "twig/twig": "~1.12"
             },
             "replace": {
                 "symfony/browser-kit": "self.version",
@@ -1779,14 +2064,12 @@
             ],
             "authors": [
                 {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com",
-                    "homepage": "http://fabien.potencier.org",
-                    "role": "Lead Developer"
-                },
-                {
                     "name": "Symfony Community",
                     "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
                 }
             ],
             "description": "The Symfony PHP framework",
@@ -1794,7 +2077,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2014-01-05 01:24:54"
+            "time": "2014-09-03 09:45:27"
         },
         {
             "name": "twig/extensions",
@@ -1903,17 +2186,671 @@
             "time": "2014-07-05 12:19:05"
         }
     ],
-    "packages-dev": [],
-    "aliases": [],
+    "packages-dev": [
+        {
+            "name": "atoum/atoum",
+            "version": "dev-edge",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/atoum/atoum.git",
+                "reference": "6106d196be9625755b341a4a52be87b496d285a9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/atoum/atoum/zipball/6106d196be9625755b341a4a52be87b496d285a9",
+                "reference": "6106d196be9625755b341a4a52be87b496d285a9",
+                "shasum": ""
+            },
+            "require": {
+                "ext-hash": "*",
+                "ext-json": "*",
+                "ext-session": "*",
+                "ext-tokenizer": "*",
+                "ext-xml": "*",
+                "php": ">=5.3.3"
+            },
+            "replace": {
+                "mageekguy/atoum": "*"
+            },
+            "suggest": {
+                "ext-mbstring": "Provides support for UTF-8 strings"
+            },
+            "bin": [
+                "bin/atoum"
+            ],
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "classes/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD"
+            ],
+            "authors": [
+                {
+                    "name": "Frédéric Hardy",
+                    "email": "frederic.hardy@atoum.org",
+                    "homepage": "http://blog.mageekbox.net"
+                },
+                {
+                    "name": "François Dussert",
+                    "email": "francois.dussert@atoum.org"
+                },
+                {
+                    "name": "Gérald Croes",
+                    "email": "gerald.croes@atoum.org"
+                },
+                {
+                    "name": "Julien Bianchi",
+                    "email": "julien.bianchi@atoum.org"
+                },
+                {
+                    "name": "Ludovic Fleury",
+                    "email": "ludovic.fleury@atoum.org"
+                }
+            ],
+            "description": "Simple modern and intuitive unit testing framework for PHP 5.3+",
+            "homepage": "http://www.atoum.org",
+            "keywords": [
+                "TDD",
+                "atoum",
+                "test",
+                "unit testing"
+            ],
+            "time": "2014-06-27 10:04:57"
+        },
+        {
+            "name": "atoum/atoum-bundle",
+            "version": "1.1.0",
+            "target-dir": "atoum/AtoumBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/atoum/AtoumBundle.git",
+                "reference": "fae972e659e2f41dbd8d3bf8344f3454b86e73b7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/atoum/AtoumBundle/zipball/fae972e659e2f41dbd8d3bf8344f3454b86e73b7",
+                "reference": "fae972e659e2f41dbd8d3bf8344f3454b86e73b7",
+                "shasum": ""
+            },
+            "require": {
+                "atoum/atoum": "dev-master",
+                "fzaninotto/faker": "1.*",
+                "php": ">=5.3.3",
+                "symfony/console": "2.*",
+                "symfony/css-selector": "2.*",
+                "symfony/dom-crawler": "2.*",
+                "symfony/finder": "2.*",
+                "symfony/framework-bundle": "2.*"
+            },
+            "replace": {
+                "jedi/atoum-bundle": "*",
+                "rezzza/atoum-bundle": "*"
+            },
+            "require-dev": {
+                "symfony/form": "2.*"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "atoum\\AtoumBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Florian Lonqueu-Brochard",
+                    "email": "dev@florianlb.fr"
+                },
+                {
+                    "name": "Community contributors",
+                    "homepage": "https://github.com/atoum/AtoumBundle/graphs/contributors"
+                }
+            ],
+            "description": "Bundle around atoum unit testing framework",
+            "homepage": "https://github.com/atoum/AtoumBundle",
+            "keywords": [
+                "atoum",
+                "test",
+                "unit testing"
+            ],
+            "time": "2014-09-15 22:30:31"
+        },
+        {
+            "name": "atoum/praspel-extension",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hoaproject/Contributions-Atoum-PraspelExtension.git",
+                "reference": "3958386e441cd60fcfd3449b7cd43ea14db061c6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hoaproject/Contributions-Atoum-PraspelExtension/zipball/3958386e441cd60fcfd3449b7cd43ea14db061c6",
+                "reference": "3958386e441cd60fcfd3449b7cd43ea14db061c6",
+                "shasum": ""
+            },
+            "require": {
+                "hoa/console": "~2.0",
+                "hoa/core": "~2.0",
+                "hoa/dispatcher": "~0.0",
+                "hoa/math": "~0.0",
+                "hoa/praspel": "~0.0",
+                "hoa/realdom": "~0.0",
+                "hoa/router": "~2.0",
+                "hoa/visitor": "~0.0"
+            },
+            "bin": [
+                "Bin/praspel"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Atoum\\PraspelExtension": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Ivan Enderlin",
+                    "email": "ivan.enderlin@hoa-project.net"
+                },
+                {
+                    "name": "Hoa community",
+                    "homepage": "http://hoa-project.net/"
+                }
+            ],
+            "description": "Include Praspel inside atoum.",
+            "homepage": "http://hoa-project.net/",
+            "keywords": [
+                "assertion",
+                "atoum",
+                "checker",
+                "contract",
+                "data",
+                "generation",
+                "library",
+                "praspel",
+                "specification",
+                "test"
+            ],
+            "time": "2014-09-17 16:33:25"
+        },
+        {
+            "name": "hoa/compiler",
+            "version": "2.14.09.17",
+            "target-dir": "Hoa/Compiler",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hoaproject/Compiler.git",
+                "reference": "00b15be9ca46e69288661294930b12c8d50ea1ce"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hoaproject/Compiler/zipball/00b15be9ca46e69288661294930b12c8d50ea1ce",
+                "reference": "00b15be9ca46e69288661294930b12c8d50ea1ce",
+                "shasum": ""
+            },
+            "require": {
+                "hoa/core": "~2.0",
+                "hoa/file": "~0.0",
+                "hoa/iterator": "~0.0",
+                "hoa/math": "~0.0",
+                "hoa/visitor": "~0.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Hoa\\Compiler": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Ivan Enderlin",
+                    "email": "ivan.enderlin@hoa-project.net"
+                },
+                {
+                    "name": "Hoa community",
+                    "homepage": "http://hoa-project.net/"
+                }
+            ],
+            "description": "The Hoa\\Compiler library.",
+            "homepage": "http://hoa-project.net/",
+            "keywords": [
+                "algebraic",
+                "ast",
+                "compiler",
+                "context-free",
+                "coverage",
+                "exhaustive",
+                "grammar",
+                "isotropic",
+                "language",
+                "lexer",
+                "library",
+                "ll1",
+                "llk",
+                "parser",
+                "pp",
+                "random",
+                "regular",
+                "rule",
+                "sampler",
+                "syntax",
+                "token",
+                "trace",
+                "uniform"
+            ],
+            "time": "2014-09-17 15:06:10"
+        },
+        {
+            "name": "hoa/file",
+            "version": "0.14.09.17",
+            "target-dir": "Hoa/File",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hoaproject/File.git",
+                "reference": "598b23276bb8de2bb12622faa2487b1b627b645a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hoaproject/File/zipball/598b23276bb8de2bb12622faa2487b1b627b645a",
+                "reference": "598b23276bb8de2bb12622faa2487b1b627b645a",
+                "shasum": ""
+            },
+            "require": {
+                "hoa/core": "~2.0",
+                "hoa/iterator": "~0.0",
+                "hoa/stream": "~0.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Hoa\\File": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Ivan Enderlin",
+                    "email": "ivan.enderlin@hoa-project.net"
+                },
+                {
+                    "name": "Hoa community",
+                    "homepage": "http://hoa-project.net/"
+                }
+            ],
+            "description": "The Hoa\\File library.",
+            "homepage": "http://hoa-project.net/",
+            "keywords": [
+                "Socket",
+                "directory",
+                "file",
+                "finder",
+                "library",
+                "link",
+                "temporary"
+            ],
+            "time": "2014-09-17 15:03:25"
+        },
+        {
+            "name": "hoa/iterator",
+            "version": "0.14.09.17",
+            "target-dir": "Hoa/Iterator",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hoaproject/Iterator.git",
+                "reference": "561a64036c4de387f220f5923206d8ca7c3acb62"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hoaproject/Iterator/zipball/561a64036c4de387f220f5923206d8ca7c3acb62",
+                "reference": "561a64036c4de387f220f5923206d8ca7c3acb62",
+                "shasum": ""
+            },
+            "require": {
+                "hoa/core": "~2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Hoa\\Iterator": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Ivan Enderlin",
+                    "email": "ivan.enderlin@hoa-project.net"
+                },
+                {
+                    "name": "Hoa community",
+                    "homepage": "http://hoa-project.net/"
+                }
+            ],
+            "description": "The Hoa\\Iterator library.",
+            "homepage": "http://hoa-project.net/",
+            "keywords": [
+                "iterator",
+                "library"
+            ],
+            "time": "2014-09-17 14:58:17"
+        },
+        {
+            "name": "hoa/math",
+            "version": "0.14.09.17",
+            "target-dir": "Hoa/Math",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hoaproject/Math.git",
+                "reference": "61ae39e607907b3d2683291cd9e5847a9f1d0419"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hoaproject/Math/zipball/61ae39e607907b3d2683291cd9e5847a9f1d0419",
+                "reference": "61ae39e607907b3d2683291cd9e5847a9f1d0419",
+                "shasum": ""
+            },
+            "require": {
+                "hoa/compiler": "~2.0",
+                "hoa/core": "~2.0",
+                "hoa/iterator": "~0.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Hoa\\Math": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Ivan Enderlin",
+                    "email": "ivan.enderlin@hoa-project.net"
+                },
+                {
+                    "name": "Hoa community",
+                    "homepage": "http://hoa-project.net/"
+                }
+            ],
+            "description": "The Hoa\\Math library.",
+            "homepage": "http://hoa-project.net/",
+            "keywords": [
+                "arrangement",
+                "combination",
+                "combinatorics",
+                "counting",
+                "library",
+                "math",
+                "permutation",
+                "sampler",
+                "set"
+            ],
+            "time": "2014-09-17 15:08:31"
+        },
+        {
+            "name": "hoa/praspel",
+            "version": "0.14.09.17",
+            "target-dir": "Hoa/Praspel",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hoaproject/Praspel.git",
+                "reference": "4e6b9599c991fd1aaf10aef7b8095a2bfa0826b9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hoaproject/Praspel/zipball/4e6b9599c991fd1aaf10aef7b8095a2bfa0826b9",
+                "reference": "4e6b9599c991fd1aaf10aef7b8095a2bfa0826b9",
+                "shasum": ""
+            },
+            "require": {
+                "hoa/compiler": "~2.0",
+                "hoa/core": "~2.0",
+                "hoa/file": "~0.0",
+                "hoa/iterator": "~0.0",
+                "hoa/realdom": "~0.0",
+                "hoa/string": "~2.0",
+                "hoa/visitor": "~0.0"
+            },
+            "require-dev": {
+                "hoa/math": "~0.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Hoa\\Praspel": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Ivan Enderlin",
+                    "email": "ivan.enderlin@hoa-project.net"
+                },
+                {
+                    "name": "Hoa community",
+                    "homepage": "http://hoa-project.net/"
+                }
+            ],
+            "description": "The Hoa\\Praspel library.",
+            "homepage": "http://hoa-project.net/",
+            "keywords": [
+                "contract",
+                "generation",
+                "invariant",
+                "library",
+                "postcondition",
+                "praspel",
+                "precondition",
+                "specification",
+                "test",
+                "validation"
+            ],
+            "time": "2014-09-17 15:36:18"
+        },
+        {
+            "name": "hoa/realdom",
+            "version": "0.14.09.17",
+            "target-dir": "Hoa/Realdom",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hoaproject/Realdom.git",
+                "reference": "e4b1337e76e2e7973121a8ac0f8ce21b0852a852"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hoaproject/Realdom/zipball/e4b1337e76e2e7973121a8ac0f8ce21b0852a852",
+                "reference": "e4b1337e76e2e7973121a8ac0f8ce21b0852a852",
+                "shasum": ""
+            },
+            "require": {
+                "hoa/compiler": "~2.0",
+                "hoa/core": "~2.0",
+                "hoa/file": "~0.0",
+                "hoa/iterator": "~0.0",
+                "hoa/math": "~0.0",
+                "hoa/praspel": "~0.0",
+                "hoa/regex": "~0.0",
+                "hoa/string": "~2.0",
+                "hoa/visitor": "~0.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Hoa\\Realdom": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Ivan Enderlin",
+                    "email": "ivan.enderlin@hoa-project.net"
+                },
+                {
+                    "name": "Hoa community",
+                    "homepage": "http://hoa-project.net/"
+                }
+            ],
+            "description": "The Hoa\\Realdom library.",
+            "homepage": "http://hoa-project.net/",
+            "keywords": [
+                "domain",
+                "generation",
+                "library",
+                "praspel",
+                "realdom",
+                "realistic",
+                "specification",
+                "test",
+                "validation"
+            ],
+            "time": "2014-09-17 15:34:20"
+        },
+        {
+            "name": "hoa/regex",
+            "version": "0.14.09.17",
+            "target-dir": "Hoa/Regex",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hoaproject/Regex.git",
+                "reference": "881e6db9cb933a6a7ae5cca2a4626e9f5334fc1c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hoaproject/Regex/zipball/881e6db9cb933a6a7ae5cca2a4626e9f5334fc1c",
+                "reference": "881e6db9cb933a6a7ae5cca2a4626e9f5334fc1c",
+                "shasum": ""
+            },
+            "require": {
+                "hoa/core": "~2.0",
+                "hoa/math": "~0.0",
+                "hoa/string": "~2.0",
+                "hoa/visitor": "~0.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Hoa\\Regex": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Ivan Enderlin",
+                    "email": "ivan.enderlin@hoa-project.net"
+                },
+                {
+                    "name": "Hoa community",
+                    "homepage": "http://hoa-project.net/"
+                }
+            ],
+            "description": "The Hoa\\Regex library.",
+            "homepage": "http://hoa-project.net/",
+            "keywords": [
+                "compiler",
+                "library",
+                "regex"
+            ],
+            "time": "2014-09-17 15:32:53"
+        },
+        {
+            "name": "hoa/visitor",
+            "version": "0.14.09.17",
+            "target-dir": "Hoa/Visitor",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hoaproject/Visitor.git",
+                "reference": "015ba35f8b5ce1533a75f50f0a6843b7722fa528"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hoaproject/Visitor/zipball/015ba35f8b5ce1533a75f50f0a6843b7722fa528",
+                "reference": "015ba35f8b5ce1533a75f50f0a6843b7722fa528",
+                "shasum": ""
+            },
+            "require": {
+                "hoa/core": "~2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Hoa\\Visitor": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Ivan Enderlin",
+                    "email": "ivan.enderlin@hoa-project.net"
+                },
+                {
+                    "name": "Hoa community",
+                    "homepage": "http://hoa-project.net/"
+                }
+            ],
+            "description": "The Hoa\\Visitor library.",
+            "homepage": "http://hoa-project.net/",
+            "keywords": [
+                "library",
+                "structure",
+                "visit",
+                "visitor"
+            ],
+            "time": "2014-09-17 15:10:43"
+        }
+    ],
+    "aliases": [
+        {
+            "alias": "dev-master",
+            "alias_normalized": "9999999-dev",
+            "version": "dev-edge",
+            "package": "atoum/atoum"
+        }
+    ],
     "minimum-stability": "stable",
     "stability-flags": {
-        "hoathis/console-bundle": 20,
-        "hoathis/symfony-console-bridge": 20,
-        "hoa/console": 20,
-        "hoathis/bench-bundle": 20,
-        "hoa/bench": 20,
         "atipik/hoa-websocket-bundle": 20,
-        "hoa/websocket": 20
+        "atoum/atoum": 20,
+        "atoum/praspel-extension": 20
     },
     "prefer-stable": false,
     "platform": {

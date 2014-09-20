@@ -9,9 +9,11 @@
     "require": {
         "php": ">=5.3.3",
         "symfony/symfony": "2.3.*",
-        "symfony/icu": "1.1.*",
+        "doctrine/orm": "~2.2,>=2.2.3",
+        "doctrine/doctrine-bundle": "1.2.*",
         "twig/extensions": "1.0.*",
         "symfony/assetic-bundle": "2.3.*",
+        "symfony/swiftmailer-bundle": "2.3.*",
         "symfony/monolog-bundle": "2.3.*",
         "sensio/distribution-bundle": "2.3.*",
         "sensio/framework-extra-bundle": "2.3.*",
@@ -20,13 +22,18 @@
 
         "fzaninotto/faker": "1.2.*",
 
-        "hoathis/console-bundle": "dev-master",
-            "hoathis/symfony-console-bridge": "*@dev",
-            "hoa/console": "*@dev",
-        "hoathis/bench-bundle": "dev-master",
-            "hoa/bench": "*@dev",
-        "atipik/hoa-websocket-bundle": "dev-master",
-            "hoa/websocket": "*@dev"
+        "hoa/core": ">=1.0,<3.0",
+        "hoa/console": ">=1.0,<3.0",
+        "hoa/bench": ">=1.0,<3.0",
+        "hoa/router": ">=1.0,<=3.0",
+        "hoa/dispatcher": "<=1.0",
+
+        "atipik/hoa-websocket-bundle" : "1.*@dev"
+    },
+    "require-dev": {
+        "atoum/atoum": "dev-edge as dev-master",
+        "atoum/praspel-extension": "dev-master",
+        "atoum/atoum-bundle": "~1.0"
     },
     "scripts": {
         "post-install-cmd": [
@@ -47,6 +54,7 @@
     "config": {
         "bin-dir": "bin"
     },
+    "bin": ["app/console"],
     "extra": {
         "symfony-app-dir": "app",
         "symfony-web-dir": "web",

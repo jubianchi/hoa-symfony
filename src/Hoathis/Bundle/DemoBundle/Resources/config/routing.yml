@@ -1,0 +1,19 @@
+hoathis_demo_welcome:
+    pattern:  /
+    defaults: { _controller: HoathisDemoBundle:Welcome:index }
+
+hoathis_demo_bench:
+    pattern:  /bench-bundle
+    defaults: { _controller: HoathisDemoBundle:Bench:index }
+
+hoathis_demo_console:
+    pattern:  /console-bundle
+    defaults: { _controller: HoathisDemoBundle:Console:index }
+
+hoathis_demo_resource_locator:
+    pattern:  /resource-locator-bundle
+    defaults: { _controller: HoathisDemoBundle:ResourceLocator:index }
+
+hoathis_demo_websocket:
+    pattern:  /websocket-bundle
+    defaults: { _controller: HoathisDemoBundle:WebSocket:index }

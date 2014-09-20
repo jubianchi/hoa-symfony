@@ -4,6 +4,12 @@ require_once dirname(__FILE__).'/SymfonyRequirements.php';
 
 $symfonyRequirements = new SymfonyRequirements();
 
+$symfonyRequirements->addRequirement(
+    version_compare(phpversion(), '5.4.28', '!='),
+    'PHP version must not be 5.4.28 as Hoa won\'t work properly with it',
+    'Install PHP 5.4.29 or newer (or downgrade to an earlier PHP version)'
+);
+
 $iniPath = $symfonyRequirements->getPhpIniConfigPath();
 
 echo "********************************\n";

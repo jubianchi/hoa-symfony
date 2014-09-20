@@ -12,18 +12,25 @@ class AppKernel extends Kernel
             new Symfony\Bundle\SecurityBundle\SecurityBundle(),
             new Symfony\Bundle\TwigBundle\TwigBundle(),
             new Symfony\Bundle\MonologBundle\MonologBundle(),
+            new Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle(),
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
-            new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle(),
+            new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
 
-            new Hoathis\DemoBundle\HoathisDemoBundle(),
-            new Atipik\Hoa\WebSocketBundle\AtipikHoaWebSocketBundle(),
             new Hoathis\Bundle\ConsoleBundle\HoathisConsoleBundle(),
-            new Hoathis\Bundle\BenchBundle\BenchBundle(),
+            new Hoathis\Bundle\BenchBundle\HoathisBenchBundle(),
+            new Hoathis\Bundle\ResourceLocatorBundle\HoathisResourceLocatorBundle(),
+
+            new Atipik\Hoa\WebSocketBundle\AtipikHoaWebSocketBundle(),
+
+            new Hoathis\Bundle\DemoBundle\HoathisDemoBundle()
         );
 
-        if (in_array($this->getEnvironment(), array('dev', 'test', 'ci'))) {
+        if (in_array($this->getEnvironment(), array('dev', 'test'))) {
+            $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
             $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
+            $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();
+            $bundles[] = new atoum\AtoumBundle\AtoumAtoumBundle();
         }
 
         return $bundles;

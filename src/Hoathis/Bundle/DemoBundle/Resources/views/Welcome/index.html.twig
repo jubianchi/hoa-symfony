@@ -1,0 +1,92 @@
+{% extends 'views://layout.html.twig' %}
+
+{% block content %}
+    <h1>Welcome to the Symfony Hoa Edition!</h1>
+
+    <p class="tcenter">The Symfony Hoa Edition is a fully-functional Symfony2 application embedding useful Hoa libraries.</p>
+
+    <div class="column fleft w50">
+        <h2 id="BenchBundle">
+            <a href="{{ path('hoathis_demo_bench') }}">hoathis/bench-bundle</a>
+        </h2>
+
+        <p>Analyse de performance</p>
+        <ul>
+            <li>Service <code>bench</code> pour le code PHP</li>
+            <li>Helper <strong>Twig</strong> pour les templates</li>
+            <li>Helper <code>bench</code> pour la console</li>
+            <li>
+                Code source :
+                <a href="https://github.com/hoaproject/Contributions-Symfony-BenchBundle">
+                    <img src="{{ resolve('assets://Image/Logo/Github.png') }}" alt="Github" style="height: 1.8em">
+                    hoathis/bench-bundle
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="column fright w50">
+        <h2 id="ConsoleBundle">
+            <a href="{{ path('hoathis_demo_console') }}">hoathis/console-bundle</a>
+        </h2>
+
+        <p>Interface en ligne de commande</p>
+        <ul>
+            <li>Support avancé de <strong>readline</strong></li>
+            <li>Support de <strong>tput</strong> et des <strong>terminfos</strong></li>
+            <li>Interface <strong>bas niveau</strong> (window, cursor, ...)</li>
+            <li>Interface <strong>haut niveau</strong> (helpers, formatter, ...)</li>
+            <li>
+                Code source :
+                <a href="https://github.com/hoaproject/">
+                    <img src="{{ resolve('assets://Image/Logo/Github.png') }}" alt="Github" style="height: 1.8em">
+                    hoathis/console-bundle
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <br style="clear: both" />
+
+    <div class="column fleft w50">
+        <h2 id="ConsoleBundle">
+            <a href="{{ path('hoathis_demo_resource_locator') }}">hoathis/resource-locator-bundle</a>
+        </h2>
+
+        <p>Localisation des ressources</p>
+        <ul>
+            <li>Protocoles <strong>virtuels</strong> prédéfinis (<code>app://</code>, <code>views://</code>, ...)</li>
+            <li>Protocoles <strong>personnalisés</strong></li>
+            <li>Fonction <strong>Twig</strong> pour les templates</li>
+            <li>
+                Code source :
+                <a href="https://github.com/hoaproject/Contributions-Symfony-ResourceLocatorBundle">
+                    <img src="{{ resolve('assets://Image/Logo/Github.png') }}" alt="Github" style="height: 1.8em">
+                    hoathis/resource-locator-bundle
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="column fright w50">
+        <h2 id="WebSocketBundle">
+            <a href="{{ path('hoathis_demo_websocket') }}">atipik/hoa-websocket-bundle</a>
+        </h2>
+
+        <p>Client/Serveur WebSocket</p>
+        <ul>
+            <li><strong>Client</strong> WebSocket</li>
+            <li><strong>Serveur</strong> WebSocket</li>
+            <li>Architecture très <strong>modulaire</strong></li>
+            <li>
+                Code source :
+                <a href="https://github.com/Atipik/Hoa-WebSocket-Bundle">
+                    <img src="{{ resolve('assets://Image/Logo/Github.png') }}" alt="Github" style="height: 1.8em">
+                    atipik/hoa-websocket-bundle
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <br style="clear: both" />
+{% endblock %}

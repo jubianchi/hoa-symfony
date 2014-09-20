@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset={{ _charset }}" />
+    <meta http-equiv="content-type" content="text/javascript; charset={{ _charset }}" />
+    <meta http-equiv="content-type" content="text/css; charset={{ _charset }}" />
+    <meta name="viewport" content="initial-scale=1.0" />
+    <title>{% block title 'Hoathis - DemoBundle' %}</title>
+
+    <link type="text/css" href="{{ resolve('assets://css/Core.css') }}" rel="stylesheet">
+    <link type="text/css" href="{{ resolve('assets://css/UI.css') }}" rel="stylesheet">
+
+    {% block head %}
+        <link rel="icon" sizes="16x16" href="{{ resolve('web://favicon.ico') }}" />
+        <link rel="stylesheet" href="{{ resolve('assets://css/demo.css') }}" />
+    {% endblock %}
+</head>
+
+<body>
+    <script src="{{ resolve('assets://js/Hoa.js') }}"></script>
+
+    <nav id="menu" aria-selected="false">
+        <div>
+            <ul id="nav-top">
+                <li><a href="{{ path('hoathis_demo_welcome') }}" class="home">Welcome</a></li>
+                <li><a href="{{ path('hoathis_demo_bench') }}" class="source">HoathisBenchBundle</a></li>
+                <li><a href="{{ path('hoathis_demo_console') }}" class="source">HoathisConsoleBundle</a></li>
+                <li><a href="{{ path('hoathis_demo_resource_locator') }}" class="source">HoathisResourceLocatorBundle</a></li>
+                <li><a href="{{ path('hoathis_demo_websocket') }}" class="source">WebSocketBundle</a></li>
+            </ul>
+            <ul id="nav-bottom">
+                <li><a href="http://hoa-project.net/Source.html" class="source">Sources</a></li>
+                <li><a href="http://hoa-project.net/Literature.html" class="literature">Littérature</a></li>
+                <li><a href="http://blog.hoa-project.net/" class="blog">Blog</a></li>
+                <li><a href="http://hoa-project.net/About.html" class="about">À propos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="body">
+        <div aria-controls="menu">
+            <img alt="Menu" src="{{ resolve('assets://Image/Icon_menu.png') }}" width="24px" height="24px">
+        </div>
+
+        <header>
+            <a href="/" class="plain">
+                {% block logo %}<img alt="Hoa" src="{{ resolve('assets://Image/Hoa.png') }}">{% endblock %}
+            </a>
+        </header>
+
+        <article id="content">
+            {% block content %}{% endblock %}
+        </article>
+
+        <footer>
+            <p>
+                Hoa est la création de Ivan Enderlin, tous droits réservés.
+                Voir <a href="http://static.hoa-project.net/LICENSE">la licence</a>.
+                <a href="http://twitter.com/hoaproject">Twitter</a>,
+                <a href="http://github.com/hoaproject">Github</a>.
+            </p>
+        </footer>
+    </div>
+
+    <script src="{{ resolve('assets://js/Prism.js') }}"></script>
+    <script src="{{ resolve('assets://js/Prism.hoa.js') }}"></script>
+    <script src="{{ resolve('assets://js/Prism.plugin.line.js') }}"></script>
+    <script>
+        Hoa.Document.onReady(function ( ) {
+            var nav = Hoa.$('#menu'),
+                menu = Hoa.$('div[aria-controls="menu"]');
+
+            menu
+                .addEventListener(
+                    'click',
+                    function () {
+                        if('false' === nav.getAttribute('aria-selected')) {
+                            nav.setAttribute('aria-selected', true);
+                        } else {
+                            nav.setAttribute('aria-selected', false);
+                        }
+                    },
+                    false
+                );
+        });
+    </script>
+</body>
+</html>

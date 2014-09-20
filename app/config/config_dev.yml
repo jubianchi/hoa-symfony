@@ -15,7 +15,7 @@ monolog:
     handlers:
         main:
             type:  stream
-            path:  %kernel.logs_dir%/%kernel.environment%.log
+            path:  "%kernel.logs_dir%/%kernel.environment%.log"
             level: debug
         firephp:
             type:  firephp
@@ -27,3 +27,5 @@ monolog:
 assetic:
     use_controller: true
 
+#swiftmailer:
+#    delivery_address: me@example.com
