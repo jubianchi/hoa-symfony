@@ -89,4 +89,49 @@
     </div>
 
     <br style="clear: both" />
+
+    <p class="tcenter">It also includes many awesome things!</p>
+
+    <div class="column fleft w50">
+        <h2 id="OpscodeChef">
+            <a>Opscode Chef everywhere</a>
+        </h2>
+
+        <img class="fleft" style="width: 100px" src="{{ resolve('assets://Image/Logo/logo_chef.svg') }}"/>
+        <ul class="fleft">
+            <li>Base <strong>recipes</strong> included (<code>fpm</code>, <code>nginx</code>, ...)</li>
+            <li>Used to provision <strong>dev.</strong> environment</li>
+            <li>Used to provision <strong>staging</strong> environment</li>
+            <li>Used to provision <strong>prod.</strong> environment</li>
+        </ul>
+    </div>
+
+    <div class="column fleft w50">
+        <h2 id="OpscodeChef">
+            <a>Vagrant</a>
+        </h2>
+
+        <img class="fleft" style="height: 100px; margin-right: 15px" src="{{ resolve('assets://Image/Logo/logo_vagrant.png') }}"/>
+        <ul class="fleft">
+            <li>Based on <code>jubianchi/php-55-dev</code> box</li>
+            <li>Provisioned with <strong>Chef</strong></li>
+            <li>Full-featured development machine<br/>(inclues <code>composer</code>, <code>phpunit</code>, ...)</li>
+            <li>Used to provision <strong>prod.</strong> environment</li>
+        </ul>
+    </div>
+
+    <br style="clear: both" />
+
+    <div class="column fleft w50">
+        <h2 id="OpscodeChef">
+            <a>Stage1</a>
+        </h2>
+
+        <p>
+            <img class="fleft" style="width: 100px; border-radius: 50%; margin-right: 15px" src="{{ resolve('assets://Image/Logo/logo_stage1.png') }}"/>
+            Because "<strong>Everyday is demo day</strong>"!
+        </p>
+    </div>
+
+    <br style="clear: both" />
 {% endblock %}
