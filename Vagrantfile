@@ -3,7 +3,7 @@ VAGRANTFILE_API_VERSION = '2'
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.ssh.forward_agent = true
 
-  unless Vagrant.has_plugin?('vagrant-hostmanager')
+  if Vagrant.has_plugin?('vagrant-hostmanager')
     config.hostmanager.enabled = true
     config.hostmanager.manage_host = true
     config.hostmanager.ignore_private_ip = false
@@ -31,9 +31,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
   config.vm.box = 'jubianchi/php-55-dev'
+
   config.vm.hostname = 'hoa-symfony'
   config.vm.network 'private_network', ip: '192.168.33.10'
+
   config.vm.synced_folder '~/.composer', '/home/vagrant/.composer'
+  config.vm.synced_folder 'app/cache', '/vagrant/app/cache', mount_options: ['dmode=777', 'fmode=777']
+  config.vm.synced_folder 'app/logs', '/vagrant/app/logs', mount_options: ['dmode=777', 'fmode=777']
 
   config.vm.provider 'virtualbox' do |vb|
     vb.customize ['modifyvm', :id, '--memory', '1024']
@@ -55,4 +59,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision 'shell', inline: 'echo "SYMFONY_ENV=dev" > /etc/environment'
   config.vm.provision 'shell', inline: 'composer self-update'
   config.vm.provision 'shell', inline: 'cd /vagrant && composer install'
+
+  config.vm.provision 'shell', inline: 'cp -f /vagrant/src/Hoathis/Bundle/DemoBundle/Resources/private/nginx.conf /etc/nginx/sites-available/default'
+  config.vm.provision 'shell', inline: 'cp -f /vagrant/src/Hoathis/Bundle/DemoBundle/Resources/private/php-fpm.conf /usr/local/etc/php-fpm.conf'
+  config.vm.provision 'shell', inline: 'ps aux | grep 'php-fpm: master process' | grep -v 'grep' || php-fpm'
+  config.vm.provision 'shell', inline: 'service nginx restart'
 end

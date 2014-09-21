@@ -21,5 +21,5 @@ build:
   # - composer run-script cookbooks
   # - composer run-script chef solo.stage1.rb
 
-  - composer install --ansi --no-progress --no-dev --no-interaction
+  - composer install --ansi --no-progress --no-interaction
   - start-stop-daemon --start --background --quiet --pidfile /tmp/websocketserver.pid --exec /app/bin/console hoa:websocketserver
