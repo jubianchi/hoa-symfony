@@ -1,4 +1,6 @@
 {
+    "name": "staging",
+    "default_attributes": {},
     "override_attributes": {
         "php-fpm": {
             "pools": [
