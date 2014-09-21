@@ -1,0 +1,36 @@
+upstream wsbackend {
+    server localhost:4242;
+}
+
+upstream phpbackend {
+    server unix:/var/run/php-fpm-<%= node[node['hoa_symfony']['app_name']]['fpm_pool'] %>.sock;
+}
+
+server {
+    server_name <%= node[node['hoa_symfony']['app_name']]['server_name'] %>;
+    root <%= node[node['hoa_symfony']['app_name']]['webroot'] %>;
+
+    sendfile off;
+
+    location / {
+        try_files $uri /<%= node[node['hoa_symfony']['app_name']]['controller'] %>$is_args$args;
+    }
+
+    location /ws {
+        proxy_pass http://wsbackend;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+    }
+
+    location ~ ^/(app|app_dev|config)\.php(/|$) {
+        fastcgi_pass phpbackend;
+        fastcgi_split_path_info ^(.+\.php)(/.*)$;
+        include fastcgi_params;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        fastcgi_param HTTPS off;
+    }
+
+    error_log /var/log/nginx/<%= node['hoa_symfony']['app_name'] %>_error.log;
+    access_log /var/log/nginx/<%= node['hoa_symfony']['app_name'] %>_access.log;
+}

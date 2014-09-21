@@ -46,22 +46,21 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.provision 'chef_solo' do |chef|
     unless Vagrant.has_plugin?('vagrant-berkshelf')
-        chef.cookbooks_path = 'vendor/cookbooks'
+        chef.cookbooks_path = ['vendor/cookbooks', 'cookbooks']
     end
 
-    chef.run_list = JSON.parse(File.read('solo.json'))['run_list']
+    json = JSON.parse(File.read('solo.json'))
+    json['php-fpm']['pools'][0]['php_options']['env[SYMFONY_ENV]'] = 'dev'
+    json['php-fpm']['pools'][0]['php_options']['env[SYMFONY_DEBUG]'] = 1
+    json['etc_environment']['SYMFONY_ENV'] = 'dev'
+    json['etc_environment']['SYMFONY_DEBUG'] = 1
+    json['hoa-symfony']['root'] = '/vagrant'
+    json['hoa-symfony']['server_name'] = 'hoa-symfony hoasf sfhoa'
+    json['run_list'] << 'recipe[hoa_symfony::dev]'
+
+    chef.json = json
   end
 
-  config.vm.provision 'shell', inline: 'apt-get install -y libicu48 libicu-dev'
-  config.vm.provision 'shell', inline: 'php -m | grep intl || pecl install intl'
-  config.vm.provision 'shell', inline: 'echo "extension=/usr/local/lib/php/extensions/no-debug-non-zts-20121212/intl.so" > /etc/php5/conf.d/intl.ini'
-  config.vm.provision 'shell', inline: 'echo "date.timezone = Europe/Paris" > /etc/php5/conf.d/date.ini'
-  config.vm.provision 'shell', inline: 'echo "SYMFONY_ENV=dev" > /etc/environment'
   config.vm.provision 'shell', inline: 'composer self-update'
   config.vm.provision 'shell', inline: 'cd /vagrant && composer install'
-
-  config.vm.provision 'shell', inline: 'cp -f /vagrant/src/Hoathis/Bundle/DemoBundle/Resources/private/nginx.conf /etc/nginx/sites-available/default'
-  config.vm.provision 'shell', inline: 'cp -f /vagrant/src/Hoathis/Bundle/DemoBundle/Resources/private/php-fpm.conf /usr/local/etc/php-fpm.conf'
-  config.vm.provision 'shell', inline: 'ps aux | grep 'php-fpm: master process' | grep -v 'grep' || php-fpm'
-  config.vm.provision 'shell', inline: 'service nginx restart'
 end

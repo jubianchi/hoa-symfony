@@ -1,3 +1,38 @@
 {
-    "run_list": [ "recipe[apt]", "recipe[mysql::server]", "recipe[nginx]" ]
+    "run_list": [
+        "recipe[apt]",
+        "recipe[etc_environment]",
+        "recipe[mysql::server]",
+        "recipe[nginx]",
+        "recipe[hoa_symfony::packages]",
+        "recipe[hoa_symfony::php]",
+        "recipe[hoa_symfony::fpm]",
+        "recipe[hoa_symfony::nginx]",
+        "recipe[php-fpm::configure]"
+    ],
+    "hoa_symfony": {
+        "app_name": "hoa-symfony"
+    },
+    "hoa-symfony": {
+
+    },
+    "nginx": {
+        "install_method": "source"
+    },
+    "php-fpm": {
+        "prefix": "/usr/local",
+        "pools": [
+            {
+                "name": "www",
+                "php_options": {
+                    "env[SYMFONY_ENV]": "prod",
+                    "env[SYMFONY_DEBUG]": 0
+                }
+            }
+        ]
+    },
+    "etc_environment": {
+        "SYMFONY_ENV": "prod",
+        "SYMFONY_DEBUG": 0
+    }
 }
