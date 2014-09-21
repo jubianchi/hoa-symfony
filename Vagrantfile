@@ -46,7 +46,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.provision 'chef_solo' do |chef|
     unless Vagrant.has_plugin?('vagrant-berkshelf')
-        chef.cookbooks_path = ['vendor/cookbooks', 'cookbooks']
+        chef.cookbooks_path = ['vendor/cookbooks', 'chef/cookbooks']
     end
 
     json = JSON.parse(File.read('solo.json'))

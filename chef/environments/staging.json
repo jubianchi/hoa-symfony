@@ -1,0 +1,18 @@
+{
+    "override_attributes": {
+        "php-fpm": {
+            "pools": [
+                {
+                    "name": "www",
+                    "php_options": {
+                        "env[SYMFONY_ENV]": "staging"
+                    }
+                }
+            ]
+        },
+
+        "etc_environment": {
+            "SYMFONY_ENV": "staging"
+        }
+    }
+}
