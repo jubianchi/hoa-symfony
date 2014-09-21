@@ -1,7 +1,7 @@
 DEPENDENCIES
   etc_environment
   hoa_symfony
-    path: cookbooks/hoa_symfony
+    path: chef/cookbooks/hoa_symfony
   mysql
   nginx
   php-fpm
