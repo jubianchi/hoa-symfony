@@ -26,4 +26,4 @@ class Chat extends Module
 
         $this->getServer()->broadcast($data['message']);
     }
-} 
+}

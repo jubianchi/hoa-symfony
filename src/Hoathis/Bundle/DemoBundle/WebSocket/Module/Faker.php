@@ -8,7 +8,7 @@ use Faker\Generator;
 
 class Faker extends Module
 {
-    function __construct(Generator $faker)
+    public function __construct(Generator $faker)
     {
         $this->faker = $faker;
     }
@@ -26,9 +26,9 @@ class Faker extends Module
         if (preg_match('/^faker:\s*(?<generator>[a-z][a-z0-9_]*)/i', $data['message'], $matches)) {
             try {
                 $bucket->getSource()->send($this->faker->{$matches['generator']});
-            } catch(\Exception $exception) {
+            } catch (\Exception $exception) {
                 $bucket->getSource()->send($exception->getMessage());
             }
         }
     }
-} 
+}

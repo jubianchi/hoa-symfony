@@ -96,7 +96,7 @@ class DemoConsoleCommand extends ContainerAwareCommand
                     break;
 
                 case 'window.title':
-                    if($title) {
+                    if ($title) {
                         $output->writeln('Le titre actuel est : ' . $title);
                     }
 
@@ -116,12 +116,12 @@ class DemoConsoleCommand extends ContainerAwareCommand
                     break;
 
                 case 'window.scroll':
-                    for($i = 0; $i < 10; $i++) {
+                    for ($i = 0; $i < 10; $i++) {
                         $window->scroll($output, WindowHelper::SCROLL_UP);
                         usleep(125000);
                     }
                     usleep(250000);
-                    for($i = 0; $i < 10; $i++) {
+                    for ($i = 0; $i < 10; $i++) {
                         $window->scroll($output, WindowHelper::SCROLL_DOWN);
                         usleep(125000);
                     }
@@ -211,7 +211,7 @@ class DemoConsoleCommand extends ContainerAwareCommand
                     );
                     $text = $readline->read($output, 'Text : ');
 
-                    if(trim($opts) !== '') {
+                    if (trim($opts) !== '') {
                         $opts = explode(' ', $opts);
                     } else {
                         $opts = array();
@@ -244,7 +244,7 @@ class DemoConsoleCommand extends ContainerAwareCommand
                         'error'
                     );
 
-                    $pager->$type($output, function() use ($styles, $formatter) {
+                    $pager->$type($output, function () use ($styles, $formatter) {
                         for ($i = 0; $i < 50; $i++) {
                             $style = $styles[rand(0, count($styles) - 1)];
                             echo $formatter->format('<' . $style . '>' . uniqid() . '</' . $style . '>') . PHP_EOL;
@@ -266,4 +266,4 @@ class DemoConsoleCommand extends ContainerAwareCommand
             }
         }
     }
-} 
+}

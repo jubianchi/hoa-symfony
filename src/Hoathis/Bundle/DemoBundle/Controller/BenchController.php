@@ -37,7 +37,7 @@ class BenchController extends Controller
 
             do {
                 $addresses[$i] = $faker->address;
-            } while(preg_match('/69\d{3}/', $addresses[$i]) === 0);
+            } while (preg_match('/69\d{3}/', $addresses[$i]) === 0);
 
             $addressesMark->pause();
         }
@@ -45,7 +45,6 @@ class BenchController extends Controller
         $namesMark->stop();     // Nous stoppons les marqueurs mis en pause
         $addressesMark->stop(); // Ceci est facultatif : les marquers en pause
                                 // seront aussi présents dans les résultats
-
         return $this->render(
             'views://Bench/index.html.twig',
             array(

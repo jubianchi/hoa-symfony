@@ -25,7 +25,7 @@ class DemoBenchCommand extends ContainerAwareCommand
 
             do {
                 $names[$i] = $faker->name;
-            } while(strlen($names[$i]) < 30);
+            } while (strlen($names[$i]) < 30);
 
             $bench->stop('name #' . $i);
             $bench->pause('names');
@@ -34,7 +34,7 @@ class DemoBenchCommand extends ContainerAwareCommand
 
             do {
                 $addresses[$i] = $faker->address;
-            } while(preg_match('/69\d{3}/', $addresses[$i]) === 0);
+            } while (preg_match('/69\d{3}/', $addresses[$i]) === 0);
 
             $bench->pause('addresses');
         }
@@ -44,7 +44,7 @@ class DemoBenchCommand extends ContainerAwareCommand
 
         $table = $this->getHelper('table');
         $table->setHeaders(array('Name', 'Address'));
-        foreach($names as $k => $name) {
+        foreach ($names as $k => $name) {
             $table->addRow(array($name, str_replace("\n", ' ', $addresses[$k])));
         }
 
@@ -54,4 +54,4 @@ class DemoBenchCommand extends ContainerAwareCommand
 
         $bench->summarize($output);
     }
-} 
+}

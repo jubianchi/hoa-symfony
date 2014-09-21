@@ -16,9 +16,16 @@ $loader->register(true);
 require_once __DIR__.'/../app/AppKernel.php';
 //require_once __DIR__.'/../app/AppCache.php';
 
-$kernel = new AppKernel('prod', false);
+$env = getenv('SYMFONY_ENV') ?: 'prod';
+$debug = getenv('SYMFONY_DEBUG') !== '0' && false === in_array($env, array('prod', 'staging'));
+
+$kernel = new AppKernel($env, $debug);
 $kernel->loadClassCache();
-//$kernel = new AppCache($kernel);
+
+if (in_array($env, array('prod', 'staging'))) {
+    $kernel = new AppCache($kernel);
+}
+
 $request = Request::createFromGlobals();
 $response = $kernel->handle($request);
 $response->send();

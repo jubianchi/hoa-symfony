@@ -10,3 +10,6 @@
 /vendor/
 /composer.phar
 /composer.lock
+
+/.bundle/
+/.vagrant/

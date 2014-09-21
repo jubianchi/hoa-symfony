@@ -37,10 +37,12 @@
     "require-dev": {
         "atoum/atoum": "dev-edge as dev-master",
         "atoum/praspel-extension": "dev-master",
-        "atoum/atoum-bundle": "~1.0"
+        "atoum/atoum-bundle": "~1.0",
+        "fabpot/php-cs-fixer": "*"
     },
     "scripts": {
         "post-install-cmd": [
+            "php app/check.php",
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
@@ -54,7 +56,10 @@
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
         ],
-        "test": "app/console --env=test atoum"
+        "cs-fix": "php-cs-fixer fix --level=all",
+        "test": "console --env=test atoum",
+        "cookbooks": "bundle install --deployment && bundle exec berks vendor vendor/cookbooks",
+        "chef": "bundle exec chef-solo -c"
     },
     "config": {
         "bin-dir": "bin"

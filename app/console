@@ -10,12 +10,11 @@ set_time_limit(0);
 require_once __DIR__.'/bootstrap.php.cache';
 require_once __DIR__.'/AppKernel.php';
 
-use Hoathis\Bundle\ConsoleBundle\Output\ConsoleOutput;
+use Symfony\Bundle\FrameworkBundle\Console\Application;
 use Symfony\Component\Console\Input\ArgvInput;
 use Symfony\Component\Debug\Debug;
 
 $input = new ArgvInput();
-
 $env = $input->getParameterOption(array('--env', '-e'), getenv('SYMFONY_ENV') ?: 'dev');
 $debug = getenv('SYMFONY_DEBUG') !== '0' && !$input->hasParameterOption(array('--no-debug', '')) && $env !== 'prod';
 
@@ -24,6 +23,5 @@ if ($debug) {
 }
 
 $kernel = new AppKernel($env, $debug);
-$kernel->boot();
-$application = $kernel->getContainer()->get('hoathis.console');
-$application->run($input, $kernel->getContainer()->get('hoathis.console.output'));
+$application = new Application($kernel);
+$application->run($input);
