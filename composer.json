@@ -38,7 +38,8 @@
         "atoum/atoum": "dev-edge as dev-master",
         "atoum/praspel-extension": "dev-master",
         "atoum/atoum-bundle": "~1.0",
-        "fabpot/php-cs-fixer": "*"
+        "fabpot/php-cs-fixer": "*",
+        "elao/web-profiler-extra-bundle": "~2.3@dev"
     },
     "scripts": {
         "post-install-cmd": [
