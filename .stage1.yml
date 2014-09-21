@@ -8,7 +8,7 @@ writable:
     - app/cache
 
 build:
-  - apt-get update
+  # - apt-get update
 
   # Install Opscode Chef
   # - curl -L https://www.opscode.com/chef/install.sh | bash

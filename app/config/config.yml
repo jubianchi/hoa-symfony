@@ -66,5 +66,5 @@ swiftmailer:
     spool:     { type: memory }
 
 atipik_hoa_web_socket:
-    address: 127.0.0.1
-    port: 8080
+    address: 0.0.0.0
+    port: 4242
