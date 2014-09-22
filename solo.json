@@ -17,7 +17,8 @@
 
     },
     "nginx": {
-        "install_method": "source"
+        "install_method": "source",
+        "default_site_enabled": false
     },
     "php-fpm": {
         "prefix": "/usr/local",

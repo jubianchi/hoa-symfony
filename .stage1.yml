@@ -5,18 +5,18 @@ writable:
     - app/cache
 
 build:
-  - apt-get update
+  # - apt-get update
 
   # Install Opscode Chef
-  - curl -L https://www.opscode.com/chef/install.sh | bash
-  - apt-get install -y build-essential ruby-dev
+  # - curl -L https://www.opscode.com/chef/install.sh | bash
+  # - apt-get install -y build-essential ruby-dev
 
   # Install Bundler
-  - gem install bundler --no-ri --no-rdoc
+  # - gem install bundler --no-ri --no-rdoc
 
   # Fetch cookbooks and run Chef
-  - composer run-script cookbooks
-  - composer run-script chef solo.stage1.rb
+  # - composer run-script cookbooks
+  # - composer run-script chef solo.stage1.rb
 
   - composer install --ansi --no-progress --no-interaction
   - start-stop-daemon --start --background --quiet --pidfile /tmp/websocketserver.pid --exec /app/bin/console hoa:websocketserver
